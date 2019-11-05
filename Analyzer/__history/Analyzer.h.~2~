@@ -1,0 +1,22 @@
+//---------------------------------------------------------------------------
+
+#ifndef AnalyzerH
+#define AnalyzerH
+//---------------------------------------------------------------------------
+#include <string>
+using namespace std;
+
+class AbstractObjectJSON {
+private:
+	int stringCount;
+	int arrayCount;
+	int objectCount;
+	int boolCount;
+public:
+	int getStringCount();
+	int getArrauCount();
+	int getObcjectCount();
+
+};
+//---------------------------------------------------------------------------
+#endif
