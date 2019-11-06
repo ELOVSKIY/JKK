@@ -93,17 +93,28 @@ void ObjectAnalyzer::calculateStringCount() { //TODO ЕБАННЫЕ ПАЛОЧК
 
 void ObjectAnalyzer::calculateBoolCount() { // TODO TESTED
     bool isString = false;
+    int arrayDeep = 0;
+    int objectDeep = 0;
     for (int i = 0; i < analyzedText.length(); i++) {
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
-        }
-        if (!isString) {
-            if (((analyzedText[i - 3] == 't') && (analyzedText[i - 2] == 'r') &&
-                 (analyzedText[i - 1] == 'u') && (analyzedText[i] == 'e')) ||
-                ((analyzedText[i - 4] == 'f') && (analyzedText[i - 3] == 'a') &&
-                 (analyzedText[i - 2] == 'l') && (analyzedText[i - 1] == 's') &&
-                 (analyzedText[i] == 'e')))
-                boolCount++;
+        } else if ((!isString) && (analyzedText[i] == '[')) {
+            arrayDeep++;
+        } else if ((!isString) && (analyzedText[i] == ']')) {
+            arrayDeep--;
+        } else if ((!isString) && (analyzedText[i] == '{')) {
+            objectDeep++;
+        } else if ((!isString) && (analyzedText[i] == '}')) {
+            objectDeep--;
+        } else if (!isString) {
+            if ((objectDeep == 1) && (arrayDeep == 0)) {
+                if (((analyzedText[i - 3] == 't') && (analyzedText[i - 2] == 'r') &&
+                     (analyzedText[i - 1] == 'u') && (analyzedText[i] == 'e')) ||
+                    ((analyzedText[i - 4] == 'f') && (analyzedText[i - 3] == 'a') &&
+                     (analyzedText[i - 2] == 'l') && (analyzedText[i - 1] == 's') &&
+                     (analyzedText[i] == 'e')))
+                    boolCount++;
+            }
         }
     }
 }
