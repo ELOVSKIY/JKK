@@ -56,6 +56,10 @@ void ObjectAnalyzer::calculateArrayCount() {
     }
 }
 
+void ObjectAnalyzer::calculateNullCount() {
+
+}
+
 void ObjectAnalyzer::calculateStringCount() { //TODO ЕБАННЫЕ ПАЛОЧКИ ПРИДЕТСЯ ФИКСИТЬ МБ (протещено)
     int quotesCount = 0;
     int objectDeep = 0;
@@ -87,7 +91,7 @@ void ObjectAnalyzer::calculateStringCount() { //TODO ЕБАННЫЕ ПАЛОЧК
     }
 }
 
-void ObjectAnalyzer::calculateBoolCount() { // todo test
+void ObjectAnalyzer::calculateBoolCount() { // TODO TESTED
     bool isString = false;
     for (int i = 0; i < analyzedText.length(); i++) {
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
@@ -97,15 +101,14 @@ void ObjectAnalyzer::calculateBoolCount() { // todo test
             if (((analyzedText[i - 3] == 't') && (analyzedText[i - 2] == 'r') &&
                  (analyzedText[i - 1] == 'u') && (analyzedText[i] == 'e')) ||
                 ((analyzedText[i - 4] == 'f') && (analyzedText[i - 3] == 'a') &&
-                 (analyzedText[i - 2] == 'l') && (analyzedText[i] - 1 == 's') &&
+                 (analyzedText[i - 2] == 'l') && (analyzedText[i - 1] == 's') &&
                  (analyzedText[i] == 'e')))
                 boolCount++;
-
         }
     }
 }
 
-void ObjectAnalyzer::calculateInnerObject(ObjectAnalyzer *object) {
+void ObjectAnalyzer::calculateInnerObject(ObjectAnalyzer *object) { //TODO TESTED
     stringCount += object->getStringCount();
     numbCount += object->getNumbCount();
     boolCount += object->getBoolCount();
@@ -113,7 +116,7 @@ void ObjectAnalyzer::calculateInnerObject(ObjectAnalyzer *object) {
     arrayCount += object->getArrayCount();
 }
 
-string ObjectAnalyzer::getNextObject(int *pos) {
+string ObjectAnalyzer::getNextObject(int *pos) { // TODO TESTED
     string objectText = "";
     int deepLevel = 0;
     bool isString = false;
@@ -136,7 +139,7 @@ string ObjectAnalyzer::getNextObject(int *pos) {
     return objectText;
 }
 
-void ObjectAnalyzer::calculateObjectCount() { // todo test
+void ObjectAnalyzer::calculateObjectCount() { // TODO TESTED
     bool isString = false;
     int arrayDeep = 0;
     for (int i = 1; i < analyzedText.length(); i++) {
@@ -165,12 +168,11 @@ bool isDigit(char c) {
     return correct;
 }
 
-void ObjectAnalyzer::calculateNumbCount() {
+void ObjectAnalyzer::calculateNumbCount() { //TODO TESTED
     bool isString = false;
     int arrayDeep = 0;
     int objectDeep = 0;
     for (int i = 0; i < analyzedText.length(); i++) {
-        char what = analyzedText[i];
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
         } else if ((!isString) && (analyzedText[i] == '[')) {

@@ -11,6 +11,7 @@ using namespace std;
 class ObjectAnalyzer {
 private:
     string analyzedText;
+    int nullCount;
     int stringCount;
     int numbCount;
     int arrayCount;
@@ -23,6 +24,7 @@ private:
     void calculateObjectCount();
     void calculateBoolCount();
     void calculateInnerObject(ObjectAnalyzer *object);
+    void calculateNullCount();
     string getNextObject(int *pos);
 public:
     int getStringCount();
@@ -30,6 +32,7 @@ public:
     int getObjectCount();
     int getBoolCount();
     int getNumbCount();
+    int getNullCount();
     ObjectAnalyzer(string text);
 };
 #endif //TEST_OBJECTANALYZER_H

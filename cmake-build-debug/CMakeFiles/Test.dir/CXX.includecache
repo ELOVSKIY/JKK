@@ -6,17 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/admin/Desktop/Test/ObjectAnalyzer.cpp
-ObjectAnalyzer.h
-C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
-Redactor.h
-C:/Users/admin/Desktop/Test/Redactor.h
-
 C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
 string
 -
 
 C:/Users/admin/Desktop/Test/Redactor.h
 string
+-
+
+C:/Users/admin/Desktop/Test/main.cpp
+iostream
+-
+Redactor.h
+C:/Users/admin/Desktop/Test/Redactor.h
+ObjectAnalyzer.h
+C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
+string.h
 -
 
