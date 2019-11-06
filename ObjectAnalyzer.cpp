@@ -7,7 +7,6 @@
 
 
 ObjectAnalyzer::ObjectAnalyzer(string text) {
-    //TODO НАДО ЛИ РЕДАКТОР?
     auto redactor = new Redactor(text);
     analyzedText = redactor->getCompressedText();
     numbCount = 0;
@@ -15,15 +14,22 @@ ObjectAnalyzer::ObjectAnalyzer(string text) {
     boolCount = 0;
     objectCount = 0;
     stringCount = 0;
+    nullCount = 0;
+
     calculateArrayCount();
     calculateBoolCount();
     calculateNumbCount();
     calculateStringCount();
     calculateObjectCount();
+    calculateNullCount();
 }
 
 int ObjectAnalyzer::getBoolCount() {
     return boolCount;
+}
+
+int ObjectAnalyzer::getNullCount(){
+    return nullCount;
 }
 
 int ObjectAnalyzer::getObjectCount() {
@@ -42,7 +48,7 @@ int ObjectAnalyzer::getArrayCount() {
     return arrayCount;
 }
 
-void ObjectAnalyzer::calculateArrayCount() {
+void ObjectAnalyzer::calculateArrayCount() { //TODO WTF
     bool isString = false;
     for (int i = 0; i < analyzedText.length(); i++) {
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
@@ -56,8 +62,30 @@ void ObjectAnalyzer::calculateArrayCount() {
     }
 }
 
-void ObjectAnalyzer::calculateNullCount() {
-
+void ObjectAnalyzer::calculateNullCount() { // TODO TESTED
+    bool isString = false;
+    int arrayDeep = 0;
+    int objectDeep = 0;
+    for (int i = 0; i < analyzedText.length(); i++) {
+        if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
+            isString = !isString;
+        } else if ((!isString) && (analyzedText[i] == '[')) {
+            arrayDeep++;
+        } else if ((!isString) && (analyzedText[i] == ']')) {
+            arrayDeep--;
+        } else if ((!isString) && (analyzedText[i] == '{')) {
+            objectDeep++;
+        } else if ((!isString) && (analyzedText[i] == '}')) {
+            objectDeep--;
+        } else if (!isString) {
+            if ((objectDeep == 1) && (arrayDeep == 0)) {
+                if ((analyzedText[i - 3] == 'n') && (analyzedText[i - 2] == 'u') &&
+                     (analyzedText[i - 1] == 'l') && (analyzedText[i] == 'l')) {
+                    nullCount++;
+                }
+            }
+        }
+    }
 }
 
 void ObjectAnalyzer::calculateStringCount() { //TODO ЕБАННЫЕ ПАЛОЧКИ ПРИДЕТСЯ ФИКСИТЬ МБ (протещено)
@@ -125,6 +153,7 @@ void ObjectAnalyzer::calculateInnerObject(ObjectAnalyzer *object) { //TODO TESTE
     boolCount += object->getBoolCount();
     objectCount += object->getObjectCount();
     arrayCount += object->getArrayCount();
+    nullCount += object->getNullCount();
 }
 
 string ObjectAnalyzer::getNextObject(int *pos) { // TODO TESTED
