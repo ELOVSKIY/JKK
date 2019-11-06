@@ -82,21 +82,66 @@ CMakeFiles/Test.dir/Redactor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Redactor.cpp.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\admin\Desktop\Test\Redactor.cpp -o CMakeFiles\Test.dir\Redactor.cpp.s
 
+CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj: ../ObjectAnalyzer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\admin\Desktop\Test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\ObjectAnalyzer.cpp.obj -c C:\Users\admin\Desktop\Test\ObjectAnalyzer.cpp
+
+CMakeFiles/Test.dir/ObjectAnalyzer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/ObjectAnalyzer.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\admin\Desktop\Test\ObjectAnalyzer.cpp > CMakeFiles\Test.dir\ObjectAnalyzer.cpp.i
+
+CMakeFiles/Test.dir/ObjectAnalyzer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/ObjectAnalyzer.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\admin\Desktop\Test\ObjectAnalyzer.cpp -o CMakeFiles\Test.dir\ObjectAnalyzer.cpp.s
+
+CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj: ../Entities/ObjectJSON.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\admin\Desktop\Test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Entities\ObjectJSON.cpp.obj -c C:\Users\admin\Desktop\Test\Entities\ObjectJSON.cpp
+
+CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\admin\Desktop\Test\Entities\ObjectJSON.cpp > CMakeFiles\Test.dir\Entities\ObjectJSON.cpp.i
+
+CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\admin\Desktop\Test\Entities\ObjectJSON.cpp -o CMakeFiles\Test.dir\Entities\ObjectJSON.cpp.s
+
+CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj: ../Entities/AbstractObjectJSON.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\admin\Desktop\Test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Entities\AbstractObjectJSON.cpp.obj -c C:\Users\admin\Desktop\Test\Entities\AbstractObjectJSON.cpp
+
+CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\admin\Desktop\Test\Entities\AbstractObjectJSON.cpp > CMakeFiles\Test.dir\Entities\AbstractObjectJSON.cpp.i
+
+CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\admin\Desktop\Test\Entities\AbstractObjectJSON.cpp -o CMakeFiles\Test.dir\Entities\AbstractObjectJSON.cpp.s
+
 # Object files for target Test
 Test_OBJECTS = \
 "CMakeFiles/Test.dir/main.cpp.obj" \
-"CMakeFiles/Test.dir/Redactor.cpp.obj"
+"CMakeFiles/Test.dir/Redactor.cpp.obj" \
+"CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj" \
+"CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj" \
+"CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj"
 
 # External object files for target Test
 Test_EXTERNAL_OBJECTS =
 
 Test.exe: CMakeFiles/Test.dir/main.cpp.obj
 Test.exe: CMakeFiles/Test.dir/Redactor.cpp.obj
+Test.exe: CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj
+Test.exe: CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj
+Test.exe: CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj
 Test.exe: CMakeFiles/Test.dir/build.make
 Test.exe: CMakeFiles/Test.dir/linklibs.rsp
 Test.exe: CMakeFiles/Test.dir/objects1.rsp
 Test.exe: CMakeFiles/Test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\admin\Desktop\Test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Test.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\admin\Desktop\Test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Test.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Test.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

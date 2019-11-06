@@ -1,26 +1,24 @@
 #include <iostream>
 #include "Redactor.h"
+#include "ObjectAnalyzer.h"
 #include <string.h>
 
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "RUS");
     string str = "{\n"
-                 "   \"firstName\": \"Иван\",\n"
-                 "   \"lastName\": \"Иванов\",\n"
-                 "   \"address\": {\n"
-                 "       \"streetAddress\": \"Московское ш., 101, кв.101\",\n"
-                 "       \"city\": \"Ленинград\",\n"
-                 "       \"postalCode\": \"101101\"\n"
-                 "   },\n"
-                 "   \"phoneNumbers\": [\n"
-                 "       \"812 123-1234\",\n"
-                 "       \"916 123-4567\"\n"
-                 "   ]\n"
+                 "  \"active\": true,\n"
+                 "      \"name\": \"Molecule Man\",\n"
+                 "  \"members\":"
+                 "    {\n"
+                 "      \"name\": \"Molecule Man\",\n"
+                 "      \"name\": \"Molecule Man\",\n"
+                 "      \"age\": 29\n"
+                 "    }\n"
                  "}";
-    Redactor *red = new Redactor(str);
-    cout<<red->getEditedText()<<endl<<endl;
-    red->setTabSize(2);
-    cout<<red->getEditedText()<<endl<<endl;
+    auto *anal = new ObjectAnalyzer(str);
+    cout << anal->getNumbCount() << endl << endl;
+
     return 0;
 }

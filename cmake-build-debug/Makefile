@@ -122,6 +122,87 @@ Test/fast:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
 
+Entities/AbstractObjectJSON.obj: Entities/AbstractObjectJSON.cpp.obj
+
+.PHONY : Entities/AbstractObjectJSON.obj
+
+# target to build an object file
+Entities/AbstractObjectJSON.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj
+.PHONY : Entities/AbstractObjectJSON.cpp.obj
+
+Entities/AbstractObjectJSON.i: Entities/AbstractObjectJSON.cpp.i
+
+.PHONY : Entities/AbstractObjectJSON.i
+
+# target to preprocess a source file
+Entities/AbstractObjectJSON.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.i
+.PHONY : Entities/AbstractObjectJSON.cpp.i
+
+Entities/AbstractObjectJSON.s: Entities/AbstractObjectJSON.cpp.s
+
+.PHONY : Entities/AbstractObjectJSON.s
+
+# target to generate assembly for a file
+Entities/AbstractObjectJSON.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.s
+.PHONY : Entities/AbstractObjectJSON.cpp.s
+
+Entities/ObjectJSON.obj: Entities/ObjectJSON.cpp.obj
+
+.PHONY : Entities/ObjectJSON.obj
+
+# target to build an object file
+Entities/ObjectJSON.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj
+.PHONY : Entities/ObjectJSON.cpp.obj
+
+Entities/ObjectJSON.i: Entities/ObjectJSON.cpp.i
+
+.PHONY : Entities/ObjectJSON.i
+
+# target to preprocess a source file
+Entities/ObjectJSON.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.i
+.PHONY : Entities/ObjectJSON.cpp.i
+
+Entities/ObjectJSON.s: Entities/ObjectJSON.cpp.s
+
+.PHONY : Entities/ObjectJSON.s
+
+# target to generate assembly for a file
+Entities/ObjectJSON.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.s
+.PHONY : Entities/ObjectJSON.cpp.s
+
+ObjectAnalyzer.obj: ObjectAnalyzer.cpp.obj
+
+.PHONY : ObjectAnalyzer.obj
+
+# target to build an object file
+ObjectAnalyzer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj
+.PHONY : ObjectAnalyzer.cpp.obj
+
+ObjectAnalyzer.i: ObjectAnalyzer.cpp.i
+
+.PHONY : ObjectAnalyzer.i
+
+# target to preprocess a source file
+ObjectAnalyzer.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ObjectAnalyzer.cpp.i
+.PHONY : ObjectAnalyzer.cpp.i
+
+ObjectAnalyzer.s: ObjectAnalyzer.cpp.s
+
+.PHONY : ObjectAnalyzer.s
+
+# target to generate assembly for a file
+ObjectAnalyzer.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ObjectAnalyzer.cpp.s
+.PHONY : ObjectAnalyzer.cpp.s
+
 Redactor.obj: Redactor.cpp.obj
 
 .PHONY : Redactor.obj
@@ -185,6 +266,15 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Test
 	@echo ... edit_cache
+	@echo ... Entities/AbstractObjectJSON.obj
+	@echo ... Entities/AbstractObjectJSON.i
+	@echo ... Entities/AbstractObjectJSON.s
+	@echo ... Entities/ObjectJSON.obj
+	@echo ... Entities/ObjectJSON.i
+	@echo ... Entities/ObjectJSON.s
+	@echo ... ObjectAnalyzer.obj
+	@echo ... ObjectAnalyzer.i
+	@echo ... ObjectAnalyzer.s
 	@echo ... Redactor.obj
 	@echo ... Redactor.i
 	@echo ... Redactor.s

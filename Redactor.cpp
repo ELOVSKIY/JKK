@@ -8,6 +8,7 @@
 
 Redactor::Redactor(string text)
         : Redactor(text, 4) {
+
     this->plainText = text;
 }
 

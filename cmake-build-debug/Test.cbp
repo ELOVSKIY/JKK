@@ -80,6 +80,24 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/admin/Desktop/Test/Entities/AbstractObjectJSON.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/Entities/AbstractObjectJSON.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/Entities/ObjectJSON.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/Entities/ObjectJSON.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/ObjectAnalyzer.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/ObjectAnalyzer.h">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="C:/Users/admin/Desktop/Test/Redactor.cpp">
 			<Option target="Test"/>
 		</Unit>

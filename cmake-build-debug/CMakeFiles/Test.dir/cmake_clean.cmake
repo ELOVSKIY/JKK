@@ -1,4 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj"
+  "CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj"
+  "CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj"
   "CMakeFiles/Test.dir/Redactor.cpp.obj"
   "CMakeFiles/Test.dir/main.cpp.obj"
   "Test.exe"
