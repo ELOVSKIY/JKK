@@ -1,14 +1,15 @@
 //
-// Created by admin on 05.11.2019.
+// Created by admin on 07.11.2019.
 //
 
-#ifndef TEST_OBJECTANALYZER_H
-#define TEST_OBJECTANALYZER_H
+#ifndef TEST_ARRAYANALYZER_H
+#define TEST_ARRAYANALYZER_H
 
 #include <string>
 using namespace std;
 
-class ObjectAnalyzer {
+class ArrayAnalyzer {
+
 private:
     string analyzedText;
     int nullCount;
@@ -35,6 +36,7 @@ private:
     string getNextObject(int *pos);
 
 public:
+
     int getStringCount();
 
     int getArrayCount();
@@ -47,6 +49,8 @@ public:
 
     int getNullCount();
 
-    ObjectAnalyzer(string text);
+    ObjectAnalyzer(string
+    text);
 };
-#endif //TEST_OBJECTANALYZER_H
+
+#endif //TEST_ARRAYANALYZER_H

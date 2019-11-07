@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/admin/Desktop/Test/ArrayAnalyzer.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/ArrayAnalyzer.h">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="C:/Users/admin/Desktop/Test/Entities/AbstractObjectJSON.cpp">
 			<Option target="Test"/>
 		</Unit>

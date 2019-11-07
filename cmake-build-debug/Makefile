@@ -122,6 +122,33 @@ Test/fast:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
 
+ArrayAnalyzer.obj: ArrayAnalyzer.cpp.obj
+
+.PHONY : ArrayAnalyzer.obj
+
+# target to build an object file
+ArrayAnalyzer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ArrayAnalyzer.cpp.obj
+.PHONY : ArrayAnalyzer.cpp.obj
+
+ArrayAnalyzer.i: ArrayAnalyzer.cpp.i
+
+.PHONY : ArrayAnalyzer.i
+
+# target to preprocess a source file
+ArrayAnalyzer.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ArrayAnalyzer.cpp.i
+.PHONY : ArrayAnalyzer.cpp.i
+
+ArrayAnalyzer.s: ArrayAnalyzer.cpp.s
+
+.PHONY : ArrayAnalyzer.s
+
+# target to generate assembly for a file
+ArrayAnalyzer.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ArrayAnalyzer.cpp.s
+.PHONY : ArrayAnalyzer.cpp.s
+
 Entities/AbstractObjectJSON.obj: Entities/AbstractObjectJSON.cpp.obj
 
 .PHONY : Entities/AbstractObjectJSON.obj
@@ -266,6 +293,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Test
 	@echo ... edit_cache
+	@echo ... ArrayAnalyzer.obj
+	@echo ... ArrayAnalyzer.i
+	@echo ... ArrayAnalyzer.s
 	@echo ... Entities/AbstractObjectJSON.obj
 	@echo ... Entities/AbstractObjectJSON.i
 	@echo ... Entities/AbstractObjectJSON.s
