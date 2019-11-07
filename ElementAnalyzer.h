@@ -27,8 +27,6 @@ private:
 
     void calculateBoolCount();
 
-    void calculateInnerElement(ElementAnalyzer *element);
-
     void calculateNullCount();
 
     string getNextObject(int *pos);

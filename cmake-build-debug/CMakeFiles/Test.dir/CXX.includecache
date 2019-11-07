@@ -6,15 +6,17 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/admin/Desktop/Test/ElementAnalyzer.cpp
+ElementAnalyzer.h
 C:/Users/admin/Desktop/Test/ElementAnalyzer.h
-string
--
-
-C:/Users/admin/Desktop/Test/ObjectAnalyzer.cpp
 ObjectAnalyzer.h
 C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
 Redactor.h
 C:/Users/admin/Desktop/Test/Redactor.h
+
+C:/Users/admin/Desktop/Test/ElementAnalyzer.h
+string
+-
 
 C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
 string

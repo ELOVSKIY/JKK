@@ -32,7 +32,7 @@ int ElementAnalyzer::getBoolCount() {
 int ElementAnalyzer::getNullCount() {
     return nullCount;
 }
-`
+
 int ElementAnalyzer::getObjectCount() {
     return objectCount;
 }
@@ -168,16 +168,7 @@ string ElementAnalyzer::getNextObject(int *pos) { // TODO TESTED
             }
         }
     }
-    objectText = objectText.substr(1, objectText.length() - 2);
     return objectText;
-}
-
-void ElementAnalyzer::calculateInnerElement(ElementAnalyzer *element) {
-    nullCount += element->getNullCount();
-    objectCount += element->getObjectCount();
-    stringCount += element->getStringCount();
-    numbCount += element->getNumbCount();
-    boolCount += element->getBoolCount();
 }
 
 void ElementAnalyzer::calculateObjectCount() { // TODO TESTED
@@ -197,8 +188,12 @@ void ElementAnalyzer::calculateObjectCount() { // TODO TESTED
             if (analyzedText[i] == '{') {
                 objectCount++; // TODO МОЖНО ПО ДЕФОЛТУ ПОСТАВИТЬ ОДИН И УБРАТЬ ЭТО
                 string elementText = getNextObject(&i);
-                auto *analyzer = new ElementAnalyzer(elementText);
-                calculateInnerElement(analyzer);
+                auto *object = new ObjectAnalyzer(elementText);
+                nullCount += object->getNullCount();
+                objectCount += object->getObjectCount();
+                stringCount += object->getStringCount();
+                numbCount += object->getNumbCount();
+                boolCount += object->getBoolCount();
             }
         }
     }

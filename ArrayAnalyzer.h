@@ -6,6 +6,7 @@
 #define TEST_ARRAYANALYZER_H
 
 #include <string>
+#include "list"
 using namespace std;
 
 class ArrayAnalyzer {
@@ -19,21 +20,10 @@ private:
     int objectCount;
     int boolCount;
 
-    void calculateArrayCount();
+    list<string> *elementTextList;
 
-    void calculateStringCount();
-
-    void calculateNumbCount();
-
-    void calculateObjectCount();
-
-    void calculateBoolCount();
-
-   // void calculateInnerObject(ObjectAnalyzer *object);
-
-    void calculateNullCount();
-
-    string getNextObject(int *pos);
+    void parseTextIntoElements();
+    void calculateValues();
 
 public:
 
@@ -49,7 +39,7 @@ public:
 
     int getNullCount();
 
-    ObjectAnalyzer(string
+    ArrayAnalyzer(string
     text);
 };
 

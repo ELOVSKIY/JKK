@@ -122,6 +122,33 @@ Test/fast:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
 
+Analyzer.obj: Analyzer.cpp.obj
+
+.PHONY : Analyzer.obj
+
+# target to build an object file
+Analyzer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Analyzer.cpp.obj
+.PHONY : Analyzer.cpp.obj
+
+Analyzer.i: Analyzer.cpp.i
+
+.PHONY : Analyzer.i
+
+# target to preprocess a source file
+Analyzer.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Analyzer.cpp.i
+.PHONY : Analyzer.cpp.i
+
+Analyzer.s: Analyzer.cpp.s
+
+.PHONY : Analyzer.s
+
+# target to generate assembly for a file
+Analyzer.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Analyzer.cpp.s
+.PHONY : Analyzer.cpp.s
+
 ArrayAnalyzer.obj: ArrayAnalyzer.cpp.obj
 
 .PHONY : ArrayAnalyzer.obj
@@ -320,6 +347,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Test
 	@echo ... edit_cache
+	@echo ... Analyzer.obj
+	@echo ... Analyzer.i
+	@echo ... Analyzer.s
 	@echo ... ArrayAnalyzer.obj
 	@echo ... ArrayAnalyzer.i
 	@echo ... ArrayAnalyzer.s
