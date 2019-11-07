@@ -16,60 +16,28 @@ ObjectAnalyzer::ObjectAnalyzer(string text) {
 
     analyzedText = text.substr(1, text.size()-1);
     elementAnalyzer = new ElementAnalyzer(analyzedText);
-
-    calculateArrayCount();
-    calculateBoolCount();
-    calculateNumbCount();
-    calculateStringCount();
-    calculateObjectCount();
-    calculateNullCount();
 }
 
 int ObjectAnalyzer::getBoolCount() {
-    return boolCount;
+    return elementAnalyzer -> getBoolCount();
 }
 
 int ObjectAnalyzer::getNullCount(){
-    return nullCount;
+    return elementAnalyzer -> getNullCount();
 }
 
 int ObjectAnalyzer::getObjectCount() {
-    return objectCount;
+    return elementAnalyzer -> getObjectCount();
 }
 
 int ObjectAnalyzer::getStringCount() {
-    return stringCount;
+    return elementAnalyzer -> getStringCount();
 }
 
 int ObjectAnalyzer::getNumbCount() {
-    return numbCount;
+    return elementAnalyzer -> getNumbCount();
 }
 
 int ObjectAnalyzer::getArrayCount() {
-    return arrayCount;
-}
-
-void ObjectAnalyzer::calculateArrayCount() { //TODO WTF
-   arrayCount += elementAnalyzer -> getArrayCount();
-}
-
-void ObjectAnalyzer::calculateNullCount() { // TODO TESTED
-   nullCount += elementAnalyzer ->getNullCount();
-}
-
-void ObjectAnalyzer::calculateStringCount() { //TODO ЕБАННЫЕ ПАЛОЧКИ ПРИДЕТСЯ ФИКСИТЬ МБ (протещено)
-    stringCount += elementAnalyzer ->getStringCount();
-}
-
-void ObjectAnalyzer::calculateBoolCount() { // TODO TESTED
-    boolCount += elementAnalyzer ->getBoolCount();
-}
-
-
-void ObjectAnalyzer::calculateObjectCount() { // TODO TESTED
-    objectCount += elementAnalyzer -> getObjectCount();
-}
-
-void ObjectAnalyzer::calculateNumbCount() { //TODO TESTED
-   numbCount += elementAnalyzer -> getNumbCount();
+    return elementAnalyzer -> getArrayCount();
 }

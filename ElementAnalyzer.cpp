@@ -32,7 +32,7 @@ int ElementAnalyzer::getBoolCount() {
 int ElementAnalyzer::getNullCount() {
     return nullCount;
 }
-
+`
 int ElementAnalyzer::getObjectCount() {
     return objectCount;
 }
@@ -184,7 +184,6 @@ void ElementAnalyzer::calculateObjectCount() { // TODO TESTED
     bool isString = false;
     int arrayDeep = 0;
     for (int i = 0; i < analyzedText.length(); i++) {
-        char wth = analyzedText[i];
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
         }
@@ -197,8 +196,8 @@ void ElementAnalyzer::calculateObjectCount() { // TODO TESTED
         if ((!isString) && (arrayDeep == 0)) {
             if (analyzedText[i] == '{') {
                 objectCount++; // TODO МОЖНО ПО ДЕФОЛТУ ПОСТАВИТЬ ОДИН И УБРАТЬ ЭТО
-                string objectText = getNextObject(&i);
-                auto *analyzer = new ElementAnalyzer(objectText);
+                string elementText = getNextObject(&i);
+                auto *analyzer = new ElementAnalyzer(elementText);
                 calculateInnerElement(analyzer);
             }
         }
@@ -206,8 +205,7 @@ void ElementAnalyzer::calculateObjectCount() { // TODO TESTED
 }
 
 bool isDigit(char c) {
-    bool correct = ((c >= '0') && (c <= '9'));
-    return correct;
+    return ((c >= '0') && (c <= '9'));
 }
 
 void ElementAnalyzer::calculateNumbCount() { //TODO TESTED
@@ -226,8 +224,6 @@ void ElementAnalyzer::calculateNumbCount() { //TODO TESTED
         } else if ((!isString) && (analyzedText[i] == '}')) {
             objectDeep--;
         } else if (!isString) {
-            char c = analyzedText[i];
-            char b = analyzedText[i + 1];
             if ((analyzedText[i] == ':') && isDigit(analyzedText[i + 1])) {
                 if ((objectDeep == 0) && (arrayDeep == 0)) {
                     numbCount++;
