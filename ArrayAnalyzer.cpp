@@ -23,17 +23,18 @@ ArrayAnalyzer::ArrayAnalyzer(string text) {
 
 void ArrayAnalyzer::calculateValues() {
     for (string text : *elementTextList){
+        AnalyzerInterface *analyzer;
         if (text[0] != '{') {
-            auto *elAnalyzer = new ElementAnalyzer(text);
+            analyzer = new ElementAnalyzer(text);
         } else{
-            auto *elAnalyzer = new ObjectAnalyzer(text);
+            analyzer = new ObjectAnalyzer(text);
         }
-        numbCount = max(numbCount, elAnalyzer -> getNumbCount());
-        stringCount = max(stringCount, elAnalyzer -> getStringCount());
-        boolCount = max(boolCount, elAnalyzer -> getBoolCount());
-        objectCount = max(objectCount, elAnalyzer -> getObjectCount());
-        arrayCount = max(arrayCount, elAnalyzer -> getArrayCount());
-        nullCount = max(numbCount, elAnalyzer -> getNullCount());
+        numbCount = max(numbCount, analyzer -> getNumbCount());
+        stringCount = max(stringCount, analyzer -> getStringCount());
+        boolCount = max(boolCount, analyzer -> getBoolCount());
+        objectCount = max(objectCount, analyzer -> getObjectCount());
+        arrayCount = max(arrayCount, analyzer -> getArrayCount());
+        nullCount = max(numbCount, analyzer -> getNullCount());
     }
 }
 

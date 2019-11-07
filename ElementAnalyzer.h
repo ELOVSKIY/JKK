@@ -5,9 +5,10 @@
 #ifndef TEST_ELEMENTANALYZER_H
 #define TEST_ELEMENTANALYZER_H
 #include <string>
+#include "Analyzer.h"
 using namespace std;
 
-class ElementAnalyzer {
+class ElementAnalyzer: public AnalyzerInterface {
 private:
     string analyzedText;
     int nullCount;
@@ -32,17 +33,6 @@ private:
     string getNextObject(int *pos);
 
 public:
-    int getStringCount();
-
-    int getArrayCount();
-
-    int getObjectCount();
-
-    int getBoolCount();
-
-    int getNumbCount();
-
-    int getNullCount();
 
     ElementAnalyzer(string text);
 };

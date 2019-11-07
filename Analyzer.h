@@ -4,7 +4,20 @@
 
 #ifndef TEST_ANALYZER_H
 #define TEST_ANALYZER_H
-class Analyzer{
 
+class AnalyzerInterface {
+public:
+    virtual int getStringCount();
+
+    virtual int getArrayCount();
+
+    virtual int getObjectCount();
+
+    virtual int getBoolCount();
+
+    virtual int getNumbCount();
+
+    virtual int getNullCount();
 };
+
 #endif //TEST_ANALYZER_H

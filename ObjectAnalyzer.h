@@ -7,9 +7,11 @@
 
 #include <string>
 #include "ElementAnalyzer.h"
+#include "Analyzer.h"
+
 using namespace std;
 
-class ObjectAnalyzer {
+class ObjectAnalyzer : public AnalyzerInterface {
 private:
     string analyzedText;
     ElementAnalyzer *elementAnalyzer;
@@ -20,32 +22,9 @@ private:
     int objectCount;
     int boolCount;
 
-    void calculateArrayCount();
-
-    void calculateStringCount();
-
-    void calculateNumbCount();
-
-    void calculateObjectCount();
-
-    void calculateBoolCount();
-
-
-    void calculateNullCount();
-
 public:
-    int getStringCount();
-
-    int getArrayCount();
-
-    int getObjectCount();
-
-    int getBoolCount();
-
-    int getNumbCount();
-
-    int getNullCount();
 
     ObjectAnalyzer(string text);
 };
+
 #endif //TEST_OBJECTANALYZER_H

@@ -7,9 +7,11 @@
 
 #include <string>
 #include "list"
+#include "Analyzer.h"
+
 using namespace std;
 
-class ArrayAnalyzer {
+class ArrayAnalyzer : AnalyzerInterface {
 
 private:
     string analyzedText;
@@ -23,24 +25,12 @@ private:
     list<string> *elementTextList;
 
     void parseTextIntoElements();
+
     void calculateValues();
 
 public:
 
-    int getStringCount();
-
-    int getArrayCount();
-
-    int getObjectCount();
-
-    int getBoolCount();
-
-    int getNumbCount();
-
-    int getNullCount();
-
-    ArrayAnalyzer(string
-    text);
+    ArrayAnalyzer(string text);
 };
 
 #endif //TEST_ARRAYANALYZER_H
