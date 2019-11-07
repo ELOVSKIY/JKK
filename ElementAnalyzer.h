@@ -2,14 +2,12 @@
 // Created by admin on 07.11.2019.
 //
 
-#ifndef TEST_ARRAYANALYZER_H
-#define TEST_ARRAYANALYZER_H
-
+#ifndef TEST_ELEMENTANALYZER_H
+#define TEST_ELEMENTANALYZER_H
 #include <string>
 using namespace std;
 
-class ArrayAnalyzer {
-
+class ElementAnalyzer {
 private:
     string analyzedText;
     int nullCount;
@@ -29,14 +27,13 @@ private:
 
     void calculateBoolCount();
 
-   // void calculateInnerObject(ObjectAnalyzer *object);
+    void calculateInnerElement(ElementAnalyzer *element);
 
     void calculateNullCount();
 
     string getNextObject(int *pos);
 
 public:
-
     int getStringCount();
 
     int getArrayCount();
@@ -49,8 +46,6 @@ public:
 
     int getNullCount();
 
-    ObjectAnalyzer(string
-    text);
+    ElementAnalyzer(string text);
 };
-
-#endif //TEST_ARRAYANALYZER_H
+#endif //TEST_ELEMENTANALYZER_H

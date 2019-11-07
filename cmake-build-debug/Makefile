@@ -149,6 +149,33 @@ ArrayAnalyzer.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ArrayAnalyzer.cpp.s
 .PHONY : ArrayAnalyzer.cpp.s
 
+ElementAnalyzer.obj: ElementAnalyzer.cpp.obj
+
+.PHONY : ElementAnalyzer.obj
+
+# target to build an object file
+ElementAnalyzer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj
+.PHONY : ElementAnalyzer.cpp.obj
+
+ElementAnalyzer.i: ElementAnalyzer.cpp.i
+
+.PHONY : ElementAnalyzer.i
+
+# target to preprocess a source file
+ElementAnalyzer.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ElementAnalyzer.cpp.i
+.PHONY : ElementAnalyzer.cpp.i
+
+ElementAnalyzer.s: ElementAnalyzer.cpp.s
+
+.PHONY : ElementAnalyzer.s
+
+# target to generate assembly for a file
+ElementAnalyzer.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ElementAnalyzer.cpp.s
+.PHONY : ElementAnalyzer.cpp.s
+
 Entities/AbstractObjectJSON.obj: Entities/AbstractObjectJSON.cpp.obj
 
 .PHONY : Entities/AbstractObjectJSON.obj
@@ -296,6 +323,9 @@ help:
 	@echo ... ArrayAnalyzer.obj
 	@echo ... ArrayAnalyzer.i
 	@echo ... ArrayAnalyzer.s
+	@echo ... ElementAnalyzer.obj
+	@echo ... ElementAnalyzer.i
+	@echo ... ElementAnalyzer.s
 	@echo ... Entities/AbstractObjectJSON.obj
 	@echo ... Entities/AbstractObjectJSON.i
 	@echo ... Entities/AbstractObjectJSON.s

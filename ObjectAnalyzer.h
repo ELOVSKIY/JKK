@@ -6,11 +6,13 @@
 #define TEST_OBJECTANALYZER_H
 
 #include <string>
+#include "ElementAnalyzer.h"
 using namespace std;
 
 class ObjectAnalyzer {
 private:
     string analyzedText;
+    ElementAnalyzer *elementAnalyzer;
     int nullCount;
     int stringCount;
     int numbCount;
@@ -28,11 +30,8 @@ private:
 
     void calculateBoolCount();
 
-    void calculateInnerObject(ObjectAnalyzer *object);
 
     void calculateNullCount();
-
-    string getNextObject(int *pos);
 
 public:
     int getStringCount();
