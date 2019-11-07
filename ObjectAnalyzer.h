@@ -25,6 +25,18 @@ private:
 public:
 
     ObjectAnalyzer(string text);
+
+    int getBoolCount();
+
+    int getNullCount();
+
+    int getObjectCount();
+
+    int getStringCount();
+
+    int getNumbCount();
+
+    int getArrayCount();
 };
 
 #endif //TEST_OBJECTANALYZER_H

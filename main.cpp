@@ -8,19 +8,16 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "RUS");
     string str = "{\n"
-                 "      \"age\": false\n"
-                 "  \"members\":"
-                 "    {\n"
-                 "       \"name\": \"Molecule Man\",\n"
-                 "       \"name\": \"Molecule Man\",\n"
-                 "       \"active\": true,\n"
-                 "       \"age\": 29,\n"
-                 "       \"age\": 29,\n"
-                 "    }\n"
-                 "      \"age\": 29\n"
+                 "  \"name\": \"John\",\n"
+                 "  \"age\": 30,\n"
+                 "  \"isAdmin\": false,\n"
+                 "  \"courses\": [\"html\", \"css\", \"js\"],\n"
+                 "  \"wife\": null\n"
                  "}";
     auto *anal = new ObjectAnalyzer(str);
     cout << anal->getNumbCount() << endl << endl;
-
+    cout << anal->getArrayCount() << endl << endl;
+    cout << anal->getStringCount() << endl << endl;
+    cout << anal->getNullCount() << endl << endl;
     return 0;
 }

@@ -31,6 +31,18 @@ private:
 public:
 
     ArrayAnalyzer(string text);
+
+    int getBoolCount();
+
+    int getNullCount();
+
+    int getObjectCount();
+
+    int getStringCount();
+
+    int getNumbCount();
+
+    int getArrayCount();
 };
 
 #endif //TEST_ARRAYANALYZER_H

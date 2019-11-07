@@ -32,8 +32,23 @@ private:
 
     string getNextObject(int *pos);
 
+    string getNextArray(int *pos);
+
 public:
 
     ElementAnalyzer(string text);
+
+    int getArrayCount();
+
+    int getNumbCount();
+
+    int getStringCount();
+
+    int getObjectCount();
+
+    int getNullCount();
+
+    int getBoolCount();
+
 };
 #endif //TEST_ELEMENTANALYZER_H

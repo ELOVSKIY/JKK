@@ -6,25 +6,35 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/admin/Desktop/Test/ElementAnalyzer.cpp
+C:/Users/admin/Desktop/Test/Analyzer.h
+
+C:/Users/admin/Desktop/Test/ArrayAnalyzer.cpp
+ArrayAnalyzer.h
+C:/Users/admin/Desktop/Test/ArrayAnalyzer.h
 ElementAnalyzer.h
 C:/Users/admin/Desktop/Test/ElementAnalyzer.h
 ObjectAnalyzer.h
 C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
-Redactor.h
-C:/Users/admin/Desktop/Test/Redactor.h
+
+C:/Users/admin/Desktop/Test/ArrayAnalyzer.h
+string
+-
+list
+C:/Users/admin/Desktop/Test/list
+Analyzer.h
+C:/Users/admin/Desktop/Test/Analyzer.h
 
 C:/Users/admin/Desktop/Test/ElementAnalyzer.h
 string
 -
+Analyzer.h
+C:/Users/admin/Desktop/Test/Analyzer.h
 
 C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
 string
 -
 ElementAnalyzer.h
 C:/Users/admin/Desktop/Test/ElementAnalyzer.h
-
-C:/Users/admin/Desktop/Test/Redactor.h
-string
--
+Analyzer.h
+C:/Users/admin/Desktop/Test/Analyzer.h
 

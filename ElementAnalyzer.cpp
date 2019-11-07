@@ -5,6 +5,7 @@
 #include "ElementAnalyzer.h"
 #include "ObjectAnalyzer.h"
 #include "Redactor.h"
+#include "ArrayAnalyzer.h"
 
 
 ElementAnalyzer::ElementAnalyzer(string text) {
@@ -25,7 +26,7 @@ ElementAnalyzer::ElementAnalyzer(string text) {
     calculateNullCount();
 }
 
-int ElementAnalyzer::getBoolCount() {
+int ElementAnalyzer::getNumbCount() {
     return boolCount;
 }
 
@@ -41,26 +42,12 @@ int ElementAnalyzer::getStringCount() {
     return stringCount;
 }
 
-int ElementAnalyzer::getNumbCount() {
-    return numbCount;
+int ElementAnalyzer::getBoolCount() {
+    return boolCount;
 }
 
 int ElementAnalyzer::getArrayCount() {
     return arrayCount;
-}
-
-void ElementAnalyzer::calculateArrayCount() { //TODO WTF
-    bool isString = false;
-    for (int i = 0; i < analyzedText.length(); i++) {
-        if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
-            isString = !isString;
-        }
-        if (!isString) {
-            if (analyzedText[i] == '[') {
-                arrayCount++;
-            }
-        }
-    }
 }
 
 void ElementAnalyzer::calculateNullCount() { // TODO TESTED
@@ -189,6 +176,57 @@ void ElementAnalyzer::calculateObjectCount() { // TODO TESTED
                 objectCount++; // TODO МОЖНО ПО ДЕФОЛТУ ПОСТАВИТЬ ОДИН И УБРАТЬ ЭТО
                 string elementText = getNextObject(&i);
                 auto *object = new ObjectAnalyzer(elementText);
+                nullCount += object->getNullCount();
+                objectCount += object->getObjectCount();
+                stringCount += object->getStringCount();
+                numbCount += object->getNumbCount();
+                boolCount += object->getBoolCount();
+            }
+        }
+    }
+}
+
+string ElementAnalyzer::getNextArray(int *pos) {
+    string objectText = "";
+    int deepLevel = 0;
+    bool isString = false;
+    for (int i = *pos; i < analyzedText.length(); i++) {
+        objectText = objectText + analyzedText[i];
+        if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
+            isString = !isString;
+        }
+        if ((!isString) && (analyzedText[i] == '[')) {
+            deepLevel++;
+        }
+        if ((!isString) && (analyzedText[i] == ']')) {
+            deepLevel--;
+            if (deepLevel == 0) {
+                *pos = i;
+                break;
+            }
+        }
+    }
+    return objectText;
+}
+
+void ElementAnalyzer::calculateArrayCount() { //TODO WTF
+    bool isString = false;
+    int objDeep = 0;
+    for (int i = 0; i < analyzedText.length(); i++) {
+        if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
+            isString = !isString;
+        }
+        if ((!isString) && (analyzedText[i] == '{')) {
+            objDeep++;
+        }
+        if ((!isString) && (analyzedText[i] == '}')) {
+            objDeep--;
+        }
+        if ((!isString) && (objDeep == 0)) {
+            if (analyzedText[i] == '[') {
+                arrayCount++; // TODO МОЖНО ПО ДЕФОЛТУ ПОСТАВИТЬ ОДИН И УБРАТЬ ЭТО
+                string arrayText = getNextArray(&i);
+                auto *object = new ArrayAnalyzer(arrayText);
                 nullCount += object->getNullCount();
                 objectCount += object->getObjectCount();
                 stringCount += object->getStringCount();

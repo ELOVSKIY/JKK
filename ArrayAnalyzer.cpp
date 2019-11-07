@@ -7,7 +7,7 @@
 #include "ObjectAnalyzer.h"
 
 ArrayAnalyzer::ArrayAnalyzer(string text) {
-    analyzedText = text.substr(1, text.size() - 1);
+    analyzedText = text.substr(1, text.size() - 1); //TODO() ПОЧЕМУ 1
 
     numbCount = 0;
     arrayCount = 0;
@@ -16,6 +16,7 @@ ArrayAnalyzer::ArrayAnalyzer(string text) {
     stringCount = 0;
     nullCount = 0;
     elementTextList = new list<string>();
+    parseTextIntoElements();
     calculateValues();
     delete(elementTextList);
 
@@ -44,6 +45,7 @@ void ArrayAnalyzer::parseTextIntoElements() {
     int arrayDeep = 0;
     int objectDeep = 0;
     for (int i = 0; i < analyzedText.length(); i++) {
+        elementText = elementText + analyzedText[i];
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
         } else if ((!isString) && (analyzedText[i] == '[')) {
@@ -57,12 +59,16 @@ void ArrayAnalyzer::parseTextIntoElements() {
         } else if (!isString) {
             if ((objectDeep == 0) && (arrayDeep == 0)) {
                 if (analyzedText[i] == ','){
-                    elementText.substr(0, elementText.length() - 1);
+                    elementText = elementText.substr(0, elementText.length() - 1);
                     elementTextList -> push_front(elementText);
                     elementText.clear();
                 }
             }
         }
+    }
+    if (elementText.length() != 0){
+        elementText = elementText.substr(0, elementText.length() - 1);
+        elementTextList -> push_front(elementText);
     }
 }
 
