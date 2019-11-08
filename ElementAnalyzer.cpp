@@ -9,8 +9,9 @@
 
 
 ElementAnalyzer::ElementAnalyzer(string text) {
-    auto redactor = new Redactor(text);
+    auto *redactor = new Redactor(text);
     analyzedText = redactor->getCompressedText();
+    delete(redactor);
     numbCount = 0;
     arrayCount = 0;
     boolCount = 0;
@@ -181,6 +182,7 @@ void ElementAnalyzer::calculateObjectCount() { // TODO TESTED
                 stringCount += object->getStringCount();
                 numbCount += object->getNumbCount();
                 boolCount += object->getBoolCount();
+                delete(object);
             }
         }
     }
@@ -224,7 +226,7 @@ void ElementAnalyzer::calculateArrayCount() { //TODO WTF
         }
         if ((!isString) && (objDeep == 0)) {
             if (analyzedText[i] == '[') {
-                arrayCount++; // TODO МОЖНО ПО ДЕФОЛТУ ПОСТАВИТЬ ОДИН И УБРАТЬ ЭТО
+                arrayCount++;
                 string arrayText = getNextArray(&i);
                 auto *object = new ArrayAnalyzer(arrayText);
                 nullCount += object->getNullCount();
@@ -232,6 +234,7 @@ void ElementAnalyzer::calculateArrayCount() { //TODO WTF
                 stringCount += object->getStringCount();
                 numbCount += object->getNumbCount();
                 boolCount += object->getBoolCount();
+                delete(object);
             }
         }
     }

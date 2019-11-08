@@ -21,6 +21,13 @@ private:
     int arrayCount;
     int objectCount;
     int boolCount;
+    void calculateNullCount();
+    void calculateBoolCount();
+    void calculateStringCount();
+    void calculateArrayCount();
+    void calculateNumbCount();
+    void calculateObjectCount();
+
 
 public:
 

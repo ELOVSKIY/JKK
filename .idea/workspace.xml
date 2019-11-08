@@ -13,19 +13,13 @@
   <component name="ChangeListManager">
     <list default="true" id="2da5df55-123d-4d03-ab37-a08701fe91f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Analyzer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Analyzer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArrayAnalyzer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayAnalyzer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ArrayAnalyzer.h" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayAnalyzer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElementAnalyzer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ElementAnalyzer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElementAnalyzer.h" beforeDir="false" afterPath="$PROJECT_DIR$/ElementAnalyzer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ObjectAnalyzer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectAnalyzer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ObjectAnalyzer.h" beforeDir="false" afterPath="$PROJECT_DIR$/ObjectAnalyzer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Test.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +87,7 @@
       <workItem from="1573068091248" duration="765000" />
       <workItem from="1573072860473" duration="2441000" />
       <workItem from="1573124630425" duration="9898000" />
+      <workItem from="1573210218656" duration="2548000" />
     </task>
     <servers />
   </component>
@@ -111,16 +106,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/ArrayAnalyzer.cpp</url>
-          <line>18</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

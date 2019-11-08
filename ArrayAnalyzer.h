@@ -28,6 +28,8 @@ private:
 
     void calculateValues();
 
+    bool isDigit(char c);
+
 public:
 
     ArrayAnalyzer(string text);

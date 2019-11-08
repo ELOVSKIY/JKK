@@ -16,28 +16,59 @@ ObjectAnalyzer::ObjectAnalyzer(string text) {
 
     analyzedText = text.substr(1, text.size()-1);
     elementAnalyzer = new ElementAnalyzer(analyzedText);
+    calculateArrayCount();
+    calculateObjectCount();
+    calculateStringCount();
+    calculateNumbCount();
+    calculateNullCount();
+    calculateBoolCount();
+    delete(elementAnalyzer);
+}
+
+void ObjectAnalyzer::calculateBoolCount() {
+    boolCount = elementAnalyzer->getObjectCount();
+}
+
+void ObjectAnalyzer::calculateNullCount() {
+    nullCount = elementAnalyzer-> getNullCount();
+}
+
+void ObjectAnalyzer::calculateNumbCount() {
+    numbCount = elementAnalyzer -> getNumbCount();
+}
+
+void ObjectAnalyzer::calculateStringCount() {
+    stringCount = elementAnalyzer -> getStringCount();
+}
+
+void ObjectAnalyzer::calculateObjectCount() {
+    objectCount = elementAnalyzer -> getObjectCount();
+}
+
+void ObjectAnalyzer::calculateArrayCount() {
+    arrayCount = elementAnalyzer -> getArrayCount();
 }
 
 int ObjectAnalyzer::getBoolCount() {
-    return elementAnalyzer -> getBoolCount();
+    return boolCount;
 }
 
 int ObjectAnalyzer::getNullCount(){
-    return elementAnalyzer -> getNullCount();
+    return nullCount;
 }
 
 int ObjectAnalyzer::getObjectCount() {
-    return elementAnalyzer -> getObjectCount();
+    return objectCount;
 }
 
 int ObjectAnalyzer::getStringCount() {
-    return elementAnalyzer -> getStringCount();
+    return stringCount;
 }
 
 int ObjectAnalyzer::getNumbCount() {
-    return elementAnalyzer -> getNumbCount();
+    return numbCount;
 }
 
 int ObjectAnalyzer::getArrayCount() {
-    return elementAnalyzer -> getArrayCount();
+    return arrayCount;
 }

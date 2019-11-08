@@ -6,7 +6,7 @@
 #include "ElementAnalyzer.h"
 #include "ObjectAnalyzer.h"
 
-ArrayAnalyzer::ArrayAnalyzer(string text) {
+ArrayAnalyzer::ArrayAnalyzer(string text) { // TODO ОСВОБОЖДЕНИЕ ПАМЯТИ
     analyzedText = text.substr(1, text.size() - 1); //TODO() ПОЧЕМУ 1
 
     numbCount = 0;
@@ -22,20 +22,29 @@ ArrayAnalyzer::ArrayAnalyzer(string text) {
 
 }
 
-void ArrayAnalyzer::calculateValues() {
+bool ArrayAnalyzer::isDigit(char c) {
+    return ((c >= '0') && (c <= '9'));
+}
+
+void ArrayAnalyzer::calculateValues() { //TODO НЕТ ПРОВЕРКИ НА МАССИВ
     for (string text : *elementTextList){
-        AnalyzerInterface *analyzer;
-        if (text[0] != '{') {
-            analyzer = new ElementAnalyzer(text);
+        if (text[0] == '{') {
+            AnalyzerInterface *analyzer = new ObjectAnalyzer(text);
+            numbCount = max(numbCount, analyzer -> getNumbCount());
+            stringCount = max(stringCount, analyzer -> getStringCount());
+            boolCount = max(boolCount, analyzer -> getBoolCount());
+            objectCount = max(objectCount, analyzer -> getObjectCount());
+            arrayCount = max(arrayCount, analyzer -> getArrayCount());
+            nullCount = max(numbCount, analyzer -> getNullCount());
+            delete(analyzer);
         } else{
-            analyzer = new ObjectAnalyzer(text);
+            if (text[0] == 't') boolCount = 1;
+            if (text[0] == 'f') boolCount = 1;
+            if (text[0] == 'n') nullCount = 1;
+            if (text[0] == '\"') stringCount = 1;
+            if (isDigit(text[0])) numbCount = 1;
         }
-        numbCount = max(numbCount, analyzer -> getNumbCount());
-        stringCount = max(stringCount, analyzer -> getStringCount());
-        boolCount = max(boolCount, analyzer -> getBoolCount());
-        objectCount = max(objectCount, analyzer -> getObjectCount());
-        arrayCount = max(arrayCount, analyzer -> getArrayCount());
-        nullCount = max(numbCount, analyzer -> getNullCount());
+
     }
 }
 
