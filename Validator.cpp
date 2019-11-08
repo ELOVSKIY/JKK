@@ -12,9 +12,15 @@ Validator::Validator(string text) {
     isCorrect = true;
     pos = 0;
     try {
-        skipNumber();
+        skipObject();
     } catch (int e) {
         isCorrect = false;
+    }
+}
+
+void Validator::checkEnd() { //TODO расставить надо
+    if (pos == text.length()) {
+        throw 0;
     }
 }
 
@@ -93,95 +99,192 @@ bool Validator::isCorrectJSON() {
 }
 
 void Validator::skipFalse() {
-    if (text[pos] == 'f'){
+    if (text[pos] == 'f') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 'a'){
+    if (text[pos] == 'a') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 'l'){
+    if (text[pos] == 'l') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 's'){
+    if (text[pos] == 's') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 'e'){
+    if (text[pos] == 'e') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
 }
 
 void Validator::skipTrue() {
-    if (text[pos] == 't'){
+    if (text[pos] == 't') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 'r'){
+    if (text[pos] == 'r') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 'u'){
+    if (text[pos] == 'u') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 'e'){
+    if (text[pos] == 'e') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
 }
 
 void Validator::skipNull() {
-    if (text[pos] == 'n'){
+    if (text[pos] == 'n') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 'u'){
+    if (text[pos] == 'u') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 'l'){
+    if (text[pos] == 'l') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
-    if (text[pos] == 'l'){
+    if (text[pos] == 'l') {
         pos++;
-    }else{
+    } else {
         throw 0;
     }
 }
 
 bool Validator::isWhiteSpace(char c) {
-    if (c == ' '){
+    if (c == ' ') {
         return true;
-    }else if (c == '\n'){
+    } else if (c == '\n') {
         return true;
-    }else if (c == '\r'){
+    } else if (c == '\r') {
         return true;
-    }else if (c == '\t'){
+    } else if (c == '\t') {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
 
 void Validator::skipWhiteSpace() {
-    while (isWhiteSpace(text[pos])){
+    while (isWhiteSpace(text[pos])) {
+        pos++;
+    }
+}
+
+void Validator::skipValue() {//TODO
+    skipWhiteSpace();
+    switch (text[pos]) {
+        case '\"':
+            skipString();
+            break;
+        case '[':
+            skipArray();
+            break;
+        case '{':
+            skipObject();
+            break;
+        case 't':
+            skipTrue();
+            break;
+        case 'f':
+            skipFalse();
+            break;
+        case 'n':
+            skipNull();
+            break;
+        default: {
+            if ((isDigit(text[pos])) || (text[pos] == '-')) {
+                skipNumber();
+            } else {
+                throw 0;
+            }
+        }
+    }
+    skipWhiteSpace();
+}
+
+void Validator::skipObject() { //TODO
+    pos++;
+    skipWhiteSpace();
+    if (text[pos] == '}') {
+        pos++;
+    } else if (text[pos] == '\"') {
+        skipString();
+        skipWhiteSpace();
+        if (text[pos] == ':') {
+            pos++;
+        } else {
+            throw 0;
+        }
+        skipValue();
+        while (text[pos] != '}') {
+            char wtf = text[pos]; //TODO DEBUG
+            if (text[pos] == ',') {
+                pos++;
+                skipWhiteSpace();
+                if (text[pos] == '\"') {
+                    skipString();
+                    skipWhiteSpace();
+                    if (text[pos] == ':') {
+                        pos++;
+                    } else {
+                        throw 0;
+                    }
+                    skipValue();
+                } else {
+                    throw 0;
+                }
+            } else {
+                throw 0;
+            }
+        }
+        pos++;
+    } else {
+        throw 0;
+    }
+}
+
+void Validator::skipArray() { //TODO()
+    pos++; // ручаюсь
+    if ((isWhiteSpace(text[pos])) || (text[pos] == ']')) {
+        skipWhiteSpace();
+        if (text[pos] == ']') {
+            pos++;
+        } else {
+            throw 0;
+        }
+    } else {
+        skipValue();
+        while (text[pos] != ']') {
+            char wtf = text[pos]; //TODO DEBUG
+            if (text[pos] == ',') {
+                pos++;
+                skipValue();
+            } else {
+                throw 0;
+            }
+        }
         pos++;
     }
 }

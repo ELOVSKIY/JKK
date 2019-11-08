@@ -39,6 +39,8 @@ private:
 
     void skipNull();
 
+    void checkEnd();
+
 public:
     Validator(string text);
 
