@@ -18,6 +18,8 @@ private:
     int objectCount;
     int boolCount;
 
+    bool isDigit(char c);
+
     void calculateArrayCount();
 
     void calculateStringCount();

@@ -32,9 +32,14 @@ CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj
 CMakeFiles/Test.dir/Redactor.cpp.obj
  C:/Users/admin/Desktop/Test/Redactor.cpp
  C:/Users/admin/Desktop/Test/Redactor.h
+CMakeFiles/Test.dir/Validator.cpp.obj
+ C:/Users/admin/Desktop/Test/Redactor.h
+ C:/Users/admin/Desktop/Test/Validator.cpp
+ C:/Users/admin/Desktop/Test/Validator.h
 CMakeFiles/Test.dir/main.cpp.obj
  C:/Users/admin/Desktop/Test/Analyzer.h
  C:/Users/admin/Desktop/Test/ElementAnalyzer.h
  C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
  C:/Users/admin/Desktop/Test/Redactor.h
+ C:/Users/admin/Desktop/Test/Validator.h
  C:/Users/admin/Desktop/Test/main.cpp

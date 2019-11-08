@@ -311,6 +311,33 @@ Redactor.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Redactor.cpp.s
 .PHONY : Redactor.cpp.s
 
+Validator.obj: Validator.cpp.obj
+
+.PHONY : Validator.obj
+
+# target to build an object file
+Validator.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Validator.cpp.obj
+.PHONY : Validator.cpp.obj
+
+Validator.i: Validator.cpp.i
+
+.PHONY : Validator.i
+
+# target to preprocess a source file
+Validator.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Validator.cpp.i
+.PHONY : Validator.cpp.i
+
+Validator.s: Validator.cpp.s
+
+.PHONY : Validator.s
+
+# target to generate assembly for a file
+Validator.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Validator.cpp.s
+.PHONY : Validator.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -368,6 +395,9 @@ help:
 	@echo ... Redactor.obj
 	@echo ... Redactor.i
 	@echo ... Redactor.s
+	@echo ... Validator.obj
+	@echo ... Validator.i
+	@echo ... Validator.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

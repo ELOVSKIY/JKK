@@ -137,7 +137,7 @@ void ElementAnalyzer::calculateBoolCount() { // TODO TESTED
 }
 
 string ElementAnalyzer::getNextObject(int *pos) { // TODO TESTED
-    string objectText = "";
+    string objectText;
     int deepLevel = 0;
     bool isString = false;
     for (int i = *pos; i < analyzedText.length(); i++) {
@@ -240,7 +240,7 @@ void ElementAnalyzer::calculateArrayCount() { //TODO WTF
     }
 }
 
-bool isDigit(char c) {
+bool ElementAnalyzer::isDigit(char c) {
     return ((c >= '0') && (c <= '9'));
 }
 
