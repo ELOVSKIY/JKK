@@ -8,7 +8,6 @@
 
 
 Validator::Validator(string text) {
-    auto *redactor = new Redactor(text);
     this->text = text;
     isCorrect = true;
     pos = 0;
@@ -17,8 +16,6 @@ Validator::Validator(string text) {
     } catch (int e) {
         isCorrect = false;
     }
-
-
 }
 
 void Validator::skipString() {
@@ -93,4 +90,98 @@ void Validator::skipNumber() {//TODO
 
 bool Validator::isCorrectJSON() {
     return isCorrect;
+}
+
+void Validator::skipFalse() {
+    if (text[pos] == 'f'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 'a'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 'l'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 's'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 'e'){
+        pos++;
+    }else{
+        throw 0;
+    }
+}
+
+void Validator::skipTrue() {
+    if (text[pos] == 't'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 'r'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 'u'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 'e'){
+        pos++;
+    }else{
+        throw 0;
+    }
+}
+
+void Validator::skipNull() {
+    if (text[pos] == 'n'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 'u'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 'l'){
+        pos++;
+    }else{
+        throw 0;
+    }
+    if (text[pos] == 'l'){
+        pos++;
+    }else{
+        throw 0;
+    }
+}
+
+bool Validator::isWhiteSpace(char c) {
+    if (c == ' '){
+        return true;
+    }else if (c == '\n'){
+        return true;
+    }else if (c == '\r'){
+        return true;
+    }else if (c == '\t'){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+void Validator::skipWhiteSpace() {
+    while (isWhiteSpace(text[pos])){
+        pos++;
+    }
 }

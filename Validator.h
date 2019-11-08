@@ -29,6 +29,10 @@ private:
 
     void skipNumber();
 
+    bool isWhiteSpace(char c);
+
+    void skipWhiteSpace();
+
     void skipTrue();
 
     void skipFalse();
