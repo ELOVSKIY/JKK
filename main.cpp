@@ -15,7 +15,7 @@ int main() {
                  "        \"type\": \"usage_limit_reached\",\n"
                  "        \"info\": \"Your monthly API request volume has been reached. Please upgrade your plan.\"    \n"
                  "    }\n"
-                 "}    ";
+                 "}";
     auto *valid = new Validator(str);
     cout<<valid->isCorrectJSON();
     return 0;

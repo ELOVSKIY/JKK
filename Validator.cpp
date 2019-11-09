@@ -13,6 +13,8 @@ Validator::Validator(string text) {
     pos = 0;
     try {
         skipObject();
+        skipWhiteSpace();
+        isCorrect = pos == text.length();
     } catch (int e) {
         isCorrect = false;
     }
@@ -43,7 +45,7 @@ bool isDigit(char c) {
     return ((c >= '0') && (c <= '9'));
 }
 
-void Validator::skipExponent() {//TODO(не обязательная часть)
+void Validator::skipExponent() {
     pos++; //ручаюсь
     if ((text[pos] == '-') || (text[pos] == '+')) {
         pos++;
@@ -56,7 +58,7 @@ void Validator::skipExponent() {//TODO(не обязательная часть)
     }
 }
 
-void Validator::skipFraction() {//TODO
+void Validator::skipFraction() {
     pos++; //ручаюсь
     if (!isDigit(text[pos])) {
         throw 0;
@@ -192,7 +194,7 @@ void Validator::skipWhiteSpace() {
     }
 }
 
-void Validator::skipValue() {//TODO
+void Validator::skipValue() {
     skipWhiteSpace();
     switch (text[pos]) {
         case '\"':
@@ -224,7 +226,8 @@ void Validator::skipValue() {//TODO
     skipWhiteSpace();
 }
 
-void Validator::skipObject() { //TODO
+void Validator::skipObject() {
+    skipWhiteSpace();
     pos++;
     skipWhiteSpace();
     if (text[pos] == '}') {
@@ -239,7 +242,6 @@ void Validator::skipObject() { //TODO
         }
         skipValue();
         while (text[pos] != '}') {
-            char wtf = text[pos]; //TODO DEBUG
             if (text[pos] == ',') {
                 pos++;
                 skipWhiteSpace();
@@ -265,7 +267,7 @@ void Validator::skipObject() { //TODO
     }
 }
 
-void Validator::skipArray() { //TODO()
+void Validator::skipArray() {
     pos++; // ручаюсь
     if ((isWhiteSpace(text[pos])) || (text[pos] == ']')) {
         skipWhiteSpace();
@@ -277,7 +279,6 @@ void Validator::skipArray() { //TODO()
     } else {
         skipValue();
         while (text[pos] != ']') {
-            char wtf = text[pos]; //TODO DEBUG
             if (text[pos] == ',') {
                 pos++;
                 skipValue();

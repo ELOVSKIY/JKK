@@ -14,7 +14,6 @@
     <list default="true" id="2da5df55-123d-4d03-ab37-a08701fe91f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Validator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Validator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Validator.h" beforeDir="false" afterPath="$PROJECT_DIR$/Validator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -87,7 +86,8 @@
       <workItem from="1573210218656" duration="3058000" />
       <workItem from="1573217508120" duration="9000" />
       <workItem from="1573217555091" duration="475000" />
-      <workItem from="1573232931770" duration="8459000" />
+      <workItem from="1573232931770" duration="8580000" />
+      <workItem from="1573278577393" duration="301000" />
     </task>
     <servers />
   </component>
@@ -108,20 +108,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>15</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Validator.cpp</url>
-          <line>268</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="this-&gt;text" />
