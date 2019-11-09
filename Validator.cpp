@@ -269,6 +269,7 @@ void Validator::skipObject() {
 
 void Validator::skipArray() {
     pos++; // ручаюсь
+    skipWhiteSpace();
     if ((isWhiteSpace(text[pos])) || (text[pos] == ']')) {
         skipWhiteSpace();
         if (text[pos] == ']') {

@@ -26,7 +26,7 @@ ObjectAnalyzer::ObjectAnalyzer(string text) {
 }
 
 void ObjectAnalyzer::calculateBoolCount() {
-    boolCount = elementAnalyzer->getObjectCount();
+    boolCount = elementAnalyzer->getBoolCount();
 }
 
 void ObjectAnalyzer::calculateNullCount() {

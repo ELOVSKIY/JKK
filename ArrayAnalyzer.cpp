@@ -27,6 +27,7 @@ bool ArrayAnalyzer::isDigit(char c) {
 }
 
 void ArrayAnalyzer::calculateValues() { //TODO НЕТ ПРОВЕРКИ НА МАССИВ
+    bool isObject = false;
     for (string text : *elementTextList){
         if (text[0] == '{') {
             AnalyzerInterface *analyzer = new ObjectAnalyzer(text);
@@ -36,6 +37,7 @@ void ArrayAnalyzer::calculateValues() { //TODO НЕТ ПРОВЕРКИ НА МА
             objectCount = max(objectCount, analyzer -> getObjectCount());
             arrayCount = max(arrayCount, analyzer -> getArrayCount());
             nullCount = max(numbCount, analyzer -> getNullCount());
+            isObject = true;
             delete(analyzer);
         } else{
             if (text[0] == 't') boolCount = 1;
@@ -45,6 +47,9 @@ void ArrayAnalyzer::calculateValues() { //TODO НЕТ ПРОВЕРКИ НА МА
             if (isDigit(text[0])) numbCount = 1;
         }
 
+    }
+    if (isObject){
+        objectCount++;
     }
 }
 

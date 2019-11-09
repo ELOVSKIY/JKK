@@ -14,6 +14,12 @@ string
 Analyzer.h
 C:/Users/admin/Desktop/Test/Analyzer.h
 
+C:/Users/admin/Desktop/Test/ObjectAnalyzer.cpp
+ObjectAnalyzer.h
+C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
+Redactor.h
+C:/Users/admin/Desktop/Test/Redactor.h
+
 C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
 string
 -
@@ -23,22 +29,6 @@ Analyzer.h
 C:/Users/admin/Desktop/Test/Analyzer.h
 
 C:/Users/admin/Desktop/Test/Redactor.h
-string
--
-
-C:/Users/admin/Desktop/Test/Validator.h
-string
-C:/Users/admin/Desktop/Test/string
-
-C:/Users/admin/Desktop/Test/main.cpp
-iostream
--
-Redactor.h
-C:/Users/admin/Desktop/Test/Redactor.h
-ObjectAnalyzer.h
-C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
-Validator.h
-C:/Users/admin/Desktop/Test/Validator.h
 string
 -
 
