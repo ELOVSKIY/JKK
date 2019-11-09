@@ -11,7 +11,7 @@
 ElementAnalyzer::ElementAnalyzer(string text) {
     auto *redactor = new Redactor(text);
     analyzedText = redactor->getCompressedText();
-    delete(redactor);
+    delete (redactor);
     numbCount = 0;
     arrayCount = 0;
     boolCount = 0;
@@ -58,16 +58,16 @@ void ElementAnalyzer::calculateNullCount() { // TODO TESTED
     for (int i = 0; i < analyzedText.length(); i++) {
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
-        } else if ((!isString) && (analyzedText[i] == '[')) {
-            arrayDeep++;
-        } else if ((!isString) && (analyzedText[i] == ']')) {
-            arrayDeep--;
-        } else if ((!isString) && (analyzedText[i] == '{')) {
-            objectDeep++;
-        } else if ((!isString) && (analyzedText[i] == '}')) {
-            objectDeep--;
         } else if (!isString) {
-            if ((objectDeep == 0) && (arrayDeep == 0)) {
+            if (analyzedText[i] == '[') {
+                arrayDeep++;
+            } else if (analyzedText[i] == ']') {
+                arrayDeep--;
+            } else if (analyzedText[i] == '{') {
+                objectDeep++;
+            } else if (analyzedText[i] == '}') {
+                objectDeep--;
+            } else if ((objectDeep == 0) && (arrayDeep == 0)) {
                 if ((analyzedText[i - 3] == 'n') && (analyzedText[i - 2] == 'u') &&
                     (analyzedText[i - 1] == 'l') && (analyzedText[i] == 'l')) {
                     nullCount++;
@@ -76,6 +76,7 @@ void ElementAnalyzer::calculateNullCount() { // TODO TESTED
         }
     }
 }
+
 
 void ElementAnalyzer::calculateStringCount() { //TODO ЕБАННЫЕ ПАЛОЧКИ ПРИДЕТСЯ ФИКСИТЬ МБ (протещено)
     int quotesCount = 0;
@@ -93,17 +94,19 @@ void ElementAnalyzer::calculateStringCount() { //TODO ЕБАННЫЕ ПАЛОЧ�
                 }
             }
 
-        } else if ((!isString) && (analyzedText[i] == '[')) {
-            arrayDeep++;
-        } else if ((!isString) && (analyzedText[i] == ']')) {
-            arrayDeep--;
-        } else if ((!isString) && (analyzedText[i] == '{')) {
-            objectDeep++;
-        } else if ((!isString) && (analyzedText[i] == '}')) {
-            objectDeep--;
-        } else if ((quotesCount == 2) &&
-                   ((analyzedText[i] == ',') || (analyzedText[i] == '[') || (analyzedText[i] == '{'))) {
-            quotesCount = 0;
+        } else if (!isString) {
+            if (analyzedText[i] == '[') {
+                arrayDeep++;
+            } else if (analyzedText[i] == ']') {
+                arrayDeep--;
+            } else if (analyzedText[i] == '{') {
+                objectDeep++;
+            } else if (analyzedText[i] == '}') {
+                objectDeep--;
+            } else if ((quotesCount == 2) &&
+                       ((analyzedText[i] == ',') || (analyzedText[i] == '[') || (analyzedText[i] == '{'))) {
+                quotesCount = 0;
+            }
         }
     }
 }
@@ -115,16 +118,16 @@ void ElementAnalyzer::calculateBoolCount() { // TODO TESTED
     for (int i = 0; i < analyzedText.length(); i++) {
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
-        } else if ((!isString) && (analyzedText[i] == '[')) {
-            arrayDeep++;
-        } else if ((!isString) && (analyzedText[i] == ']')) {
-            arrayDeep--;
-        } else if ((!isString) && (analyzedText[i] == '{')) {
-            objectDeep++;
-        } else if ((!isString) && (analyzedText[i] == '}')) {
-            objectDeep--;
         } else if (!isString) {
-            if ((objectDeep == 0) && (arrayDeep == 0)) {
+            if (analyzedText[i] == '[') {
+                arrayDeep++;
+            } else if (analyzedText[i] == ']') {
+                arrayDeep--;
+            } else if (analyzedText[i] == '{') {
+                objectDeep++;
+            } else if (analyzedText[i] == '}') {
+                objectDeep--;
+            } else if ((objectDeep == 0) && (arrayDeep == 0)) {
                 if (((analyzedText[i - 3] == 't') && (analyzedText[i - 2] == 'r') &&
                      (analyzedText[i - 1] == 'u') && (analyzedText[i] == 'e')) ||
                     ((analyzedText[i - 4] == 'f') && (analyzedText[i - 3] == 'a') &&
@@ -134,7 +137,9 @@ void ElementAnalyzer::calculateBoolCount() { // TODO TESTED
             }
         }
     }
+
 }
+
 
 string ElementAnalyzer::getNextObject(int *pos) { // TODO TESTED
     string objectText;
@@ -145,16 +150,18 @@ string ElementAnalyzer::getNextObject(int *pos) { // TODO TESTED
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
         }
-        if ((!isString) && (analyzedText[i] == '{')) {
-            deepLevel++;
-        }
-        if ((!isString) && (analyzedText[i] == '}')) {
-            deepLevel--;
-            if (deepLevel == 0) {
-                *pos = i;
-                break;
+        if (!isString) {
+            if (analyzedText[i] == '{') {
+                deepLevel++;
+            } else if (analyzedText[i] == '}') {
+                deepLevel--;
+                if (deepLevel == 0) {
+                    *pos = i;
+                    break;
+                }
             }
         }
+
     }
     return objectText;
 }
@@ -166,25 +173,27 @@ void ElementAnalyzer::calculateObjectCount() { // TODO TESTED
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
         }
-        if ((!isString) && (analyzedText[i] == '[')) {
-            arrayDeep++;
-        }
-        if ((!isString) && (analyzedText[i] == ']')) {
-            arrayDeep--;
-        }
-        if ((!isString) && (arrayDeep == 0)) {
-            if (analyzedText[i] == '{') {
-                objectCount++; // TODO МОЖНО ПО ДЕФОЛТУ ПОСТАВИТЬ ОДИН И УБРАТЬ ЭТО
-                string elementText = getNextObject(&i);
-                auto *object = new ObjectAnalyzer(elementText);
-                nullCount += object->getNullCount();
-                objectCount += object->getObjectCount();
-                stringCount += object->getStringCount();
-                numbCount += object->getNumbCount();
-                boolCount += object->getBoolCount();
-                delete(object);
+        if (!isString) {
+            if (analyzedText[i] == '[') {
+                arrayDeep++;
+            } else if (analyzedText[i] == ']') {
+                arrayDeep--;
+            } else if (arrayDeep == 0) {
+                if (analyzedText[i] == '{') {
+                    objectCount++; // TODO МОЖНО ПО ДЕФОЛТУ ПОСТАВИТЬ ОДИН И УБРАТЬ ЭТО
+                    string elementText = getNextObject(&i);
+                    auto *object = new ObjectAnalyzer(elementText);
+                    nullCount += object->getNullCount();
+                    objectCount += object->getObjectCount();
+                    stringCount += object->getStringCount();
+                    numbCount += object->getNumbCount();
+                    boolCount += object->getBoolCount();
+                    delete (object);
+                }
             }
         }
+
+
     }
 }
 
@@ -197,14 +206,15 @@ string ElementAnalyzer::getNextArray(int *pos) {
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
         }
-        if ((!isString) && (analyzedText[i] == '[')) {
-            deepLevel++;
-        }
-        if ((!isString) && (analyzedText[i] == ']')) {
-            deepLevel--;
-            if (deepLevel == 0) {
-                *pos = i;
-                break;
+        if (!isString) {
+            if (analyzedText[i] == '[') {
+                deepLevel++;
+            } else if (analyzedText[i] == ']') {
+                deepLevel--;
+                if (deepLevel == 0) {
+                    *pos = i;
+                    break;
+                }
             }
         }
     }
@@ -234,7 +244,7 @@ void ElementAnalyzer::calculateArrayCount() { //TODO WTF
                 stringCount += object->getStringCount();
                 numbCount += object->getNumbCount();
                 boolCount += object->getBoolCount();
-                delete(object);
+                delete (object);
             }
         }
     }
@@ -251,16 +261,16 @@ void ElementAnalyzer::calculateNumbCount() { //TODO TESTED
     for (int i = 0; i < analyzedText.length(); i++) {
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
-        } else if ((!isString) && (analyzedText[i] == '[')) {
-            arrayDeep++;
-        } else if ((!isString) && (analyzedText[i] == ']')) {
-            arrayDeep--;
-        } else if ((!isString) && (analyzedText[i] == '{')) {
-            objectDeep++;
-        } else if ((!isString) && (analyzedText[i] == '}')) {
-            objectDeep--;
         } else if (!isString) {
-            if ((analyzedText[i] == ':') && isDigit(analyzedText[i + 1])) {
+            if (analyzedText[i] == '[') {
+                arrayDeep++;
+            } else if (analyzedText[i] == ']') {
+                arrayDeep--;
+            } else if (analyzedText[i] == '{') {
+                objectDeep++;
+            } else if (analyzedText[i] == '}') {
+                objectDeep--;
+            } else if ((analyzedText[i] == ':') && isDigit(analyzedText[i + 1])) {
                 if ((objectDeep == 0) && (arrayDeep == 0)) {
                     numbCount++;
                 }

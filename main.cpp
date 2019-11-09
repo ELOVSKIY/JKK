@@ -16,7 +16,11 @@ int main() {
                  "        \"info\": \"Your monthly API request volume has been reached. Please upgrade your plan.\"    \n"
                  "    }\n"
                  "}";
-    auto *valid = new Validator(str);
-    cout<<valid->isCorrectJSON();
+    auto *analyzer = new ObjectAnalyzer(str);
+    cout<<analyzer->getArrayCount()<<endl;
+    cout<<analyzer->getNumbCount()<<endl;
+    cout<<analyzer->getStringCount()<<endl;
+    cout<<analyzer->getObjectCount()<<endl;
+    cout<<analyzer->getBoolCount()<<endl;
     return 0;
 }

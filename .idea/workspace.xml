@@ -13,8 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2da5df55-123d-4d03-ab37-a08701fe91f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Validator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Validator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Test.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElementAnalyzer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ElementAnalyzer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/AbstractObjectJSON.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/AbstractObjectJSON.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/ObjectJSON.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/ObjectJSON.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,7 +90,7 @@
       <workItem from="1573217508120" duration="9000" />
       <workItem from="1573217555091" duration="475000" />
       <workItem from="1573232931770" duration="8580000" />
-      <workItem from="1573278577393" duration="301000" />
+      <workItem from="1573278577393" duration="1434000" />
     </task>
     <servers />
   </component>

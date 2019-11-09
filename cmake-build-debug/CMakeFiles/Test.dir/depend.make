@@ -17,11 +17,7 @@ CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj: ../ElementAnalyzer.h
 CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj: ../ObjectAnalyzer.h
 CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj: ../Redactor.h
 
-CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj: ../Entities/AbstractObjectJSON.cpp
-CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj: ../Entities/AbstractObjectJSON.h
 
-CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj: ../Entities/ObjectJSON.cpp
-CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj: ../Entities/ObjectJSON.h
 
 CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj: ../Analyzer.h
 CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj: ../ElementAnalyzer.h
