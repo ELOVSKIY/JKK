@@ -122,6 +122,33 @@ Test/fast:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
 
+AbstractValue.obj: AbstractValue.cpp.obj
+
+.PHONY : AbstractValue.obj
+
+# target to build an object file
+AbstractValue.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/AbstractValue.cpp.obj
+.PHONY : AbstractValue.cpp.obj
+
+AbstractValue.i: AbstractValue.cpp.i
+
+.PHONY : AbstractValue.i
+
+# target to preprocess a source file
+AbstractValue.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/AbstractValue.cpp.i
+.PHONY : AbstractValue.cpp.i
+
+AbstractValue.s: AbstractValue.cpp.s
+
+.PHONY : AbstractValue.s
+
+# target to generate assembly for a file
+AbstractValue.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/AbstractValue.cpp.s
+.PHONY : AbstractValue.cpp.s
+
 Analyzer.obj: Analyzer.cpp.obj
 
 .PHONY : Analyzer.obj
@@ -257,6 +284,33 @@ Entities/ObjectJSON.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.s
 .PHONY : Entities/ObjectJSON.cpp.s
 
+Object.obj: Object.cpp.obj
+
+.PHONY : Object.obj
+
+# target to build an object file
+Object.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Object.cpp.obj
+.PHONY : Object.cpp.obj
+
+Object.i: Object.cpp.i
+
+.PHONY : Object.i
+
+# target to preprocess a source file
+Object.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Object.cpp.i
+.PHONY : Object.cpp.i
+
+Object.s: Object.cpp.s
+
+.PHONY : Object.s
+
+# target to generate assembly for a file
+Object.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Object.cpp.s
+.PHONY : Object.cpp.s
+
 ObjectAnalyzer.obj: ObjectAnalyzer.cpp.obj
 
 .PHONY : ObjectAnalyzer.obj
@@ -374,6 +428,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Test
 	@echo ... edit_cache
+	@echo ... AbstractValue.obj
+	@echo ... AbstractValue.i
+	@echo ... AbstractValue.s
 	@echo ... Analyzer.obj
 	@echo ... Analyzer.i
 	@echo ... Analyzer.s
@@ -389,6 +446,9 @@ help:
 	@echo ... Entities/ObjectJSON.obj
 	@echo ... Entities/ObjectJSON.i
 	@echo ... Entities/ObjectJSON.s
+	@echo ... Object.obj
+	@echo ... Object.i
+	@echo ... Object.s
 	@echo ... ObjectAnalyzer.obj
 	@echo ... ObjectAnalyzer.i
 	@echo ... ObjectAnalyzer.s

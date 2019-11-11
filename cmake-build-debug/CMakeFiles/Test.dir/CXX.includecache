@@ -6,29 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/admin/Desktop/Test/Analyzer.h
-
-C:/Users/admin/Desktop/Test/ElementAnalyzer.h
+C:/Users/admin/Desktop/Test/AbstractValue.h
 string
 -
-Analyzer.h
-C:/Users/admin/Desktop/Test/Analyzer.h
 
-C:/Users/admin/Desktop/Test/ObjectAnalyzer.cpp
-ObjectAnalyzer.h
-C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
-Redactor.h
-C:/Users/admin/Desktop/Test/Redactor.h
+C:/Users/admin/Desktop/Test/Object.cpp
+Object.h
+C:/Users/admin/Desktop/Test/Object.h
 
-C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
-string
--
-ElementAnalyzer.h
-C:/Users/admin/Desktop/Test/ElementAnalyzer.h
-Analyzer.h
-C:/Users/admin/Desktop/Test/Analyzer.h
-
-C:/Users/admin/Desktop/Test/Redactor.h
-string
+C:/Users/admin/Desktop/Test/Object.h
+AbstractValue.h
+C:/Users/admin/Desktop/Test/AbstractValue.h
+set
 -
 

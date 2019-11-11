@@ -18,7 +18,7 @@ ArrayAnalyzer::ArrayAnalyzer(string text) { // TODO ОСВОБОЖДЕНИЕ П�
     elementTextList = new list<string>();
     parseTextIntoElements();
     calculateValues();
-    delete(elementTextList);
+    delete (elementTextList);
 
 }
 
@@ -28,27 +28,26 @@ bool ArrayAnalyzer::isDigit(char c) {
 
 void ArrayAnalyzer::calculateValues() { //TODO НЕТ ПРОВЕРКИ НА МАССИВ
     bool isObject = false;
-    for (string text : *elementTextList){
+    for (string text : *elementTextList) {
         if (text[0] == '{') {
             AnalyzerInterface *analyzer = new ObjectAnalyzer(text);
-            numbCount = max(numbCount, analyzer -> getNumbCount());
-            stringCount = max(stringCount, analyzer -> getStringCount());
-            boolCount = max(boolCount, analyzer -> getBoolCount());
-            objectCount = max(objectCount, analyzer -> getObjectCount());
-            arrayCount = max(arrayCount, analyzer -> getArrayCount());
-            nullCount = max(numbCount, analyzer -> getNullCount());
+            numbCount = max(numbCount, analyzer->getNumbCount());
+            stringCount = max(stringCount, analyzer->getStringCount());
+            boolCount = max(boolCount, analyzer->getBoolCount());
+            objectCount = max(objectCount, analyzer->getObjectCount());
+            arrayCount = max(arrayCount, analyzer->getArrayCount());
+            nullCount = max(numbCount, analyzer->getNullCount());
             isObject = true;
-            delete(analyzer);
-        } else{
+            delete (analyzer);
+        } else {
             if (text[0] == 't') boolCount = 1;
             if (text[0] == 'f') boolCount = 1;
             if (text[0] == 'n') nullCount = 1;
             if (text[0] == '\"') stringCount = 1;
             if (isDigit(text[0])) numbCount = 1;
         }
-
     }
-    if (isObject){
+    if (isObject) {
         objectCount++;
     }
 }
@@ -59,32 +58,33 @@ void ArrayAnalyzer::parseTextIntoElements() {
     int arrayDeep = 0;
     int objectDeep = 0;
     for (int i = 0; i < analyzedText.length(); i++) {
-        elementText = elementText + analyzedText[i];
+        elementText += analyzedText[i];
         if ((analyzedText[i] == '"') && (analyzedText[i - 1] != '\\')) {
             isString = !isString;
-        } else if ((!isString) && (analyzedText[i] == '[')) {
-            arrayDeep++;
-        } else if ((!isString) && (analyzedText[i] == ']')) {
-            arrayDeep--;
-        } else if ((!isString) && (analyzedText[i] == '{')) {
-            objectDeep++;
-        } else if ((!isString) && (analyzedText[i] == '}')) {
-            objectDeep--;
         } else if (!isString) {
-            if ((objectDeep == 0) && (arrayDeep == 0)) {
-                if (analyzedText[i] == ','){
+            if (analyzedText[i] == '[') {
+                arrayDeep++;
+            } else if (analyzedText[i] == ']') {
+                arrayDeep--;
+            } else if (analyzedText[i] == '{') {
+                objectDeep++;
+            } else if (analyzedText[i] == '}') {
+                objectDeep--;
+            } else if (analyzedText[i] == ',') {
+                if ((objectDeep == 0) && (arrayDeep == 0)) {
                     elementText = elementText.substr(0, elementText.length() - 1);
-                    elementTextList -> push_front(elementText);
+                    elementTextList->push_front(elementText);
                     elementText.clear();
                 }
             }
         }
     }
-    if (elementText.length() != 0){
+    if (elementText.length() != 0) {
         elementText = elementText.substr(0, elementText.length() - 1);
-        elementTextList -> push_front(elementText);
+        elementTextList->push_front(elementText);
     }
 }
+
 
 int ArrayAnalyzer::getBoolCount() {
     return boolCount;
