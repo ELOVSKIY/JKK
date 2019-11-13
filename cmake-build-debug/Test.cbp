@@ -122,6 +122,12 @@
 		<Unit filename="C:/Users/admin/Desktop/Test/ObjectAnalyzer.h">
 			<Option target="Test"/>
 		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/Parser.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/Parser.h">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="C:/Users/admin/Desktop/Test/Redactor.cpp">
 			<Option target="Test"/>
 		</Unit>

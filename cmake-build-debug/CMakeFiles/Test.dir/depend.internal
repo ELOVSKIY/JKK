@@ -29,6 +29,11 @@ CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj
  C:/Users/admin/Desktop/Test/ObjectAnalyzer.cpp
  C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
  C:/Users/admin/Desktop/Test/Redactor.h
+CMakeFiles/Test.dir/Parser.cpp.obj
+ C:/Users/admin/Desktop/Test/Object.h
+ C:/Users/admin/Desktop/Test/Parser.cpp
+ C:/Users/admin/Desktop/Test/Parser.h
+ C:/Users/admin/Desktop/Test/Value.h
 CMakeFiles/Test.dir/Redactor.cpp.obj
  C:/Users/admin/Desktop/Test/Redactor.cpp
  C:/Users/admin/Desktop/Test/Redactor.h

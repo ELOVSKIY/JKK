@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/admin/Desktop/Test/Entities/ObjectJSON.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj"
   "C:/Users/admin/Desktop/Test/Object.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Object.cpp.obj"
   "C:/Users/admin/Desktop/Test/ObjectAnalyzer.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj"
+  "C:/Users/admin/Desktop/Test/Parser.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Parser.cpp.obj"
   "C:/Users/admin/Desktop/Test/Redactor.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Redactor.cpp.obj"
   "C:/Users/admin/Desktop/Test/Validator.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Validator.cpp.obj"
   "C:/Users/admin/Desktop/Test/Value.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Value.cpp.obj"

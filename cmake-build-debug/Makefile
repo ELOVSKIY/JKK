@@ -311,6 +311,33 @@ ObjectAnalyzer.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ObjectAnalyzer.cpp.s
 .PHONY : ObjectAnalyzer.cpp.s
 
+Parser.obj: Parser.cpp.obj
+
+.PHONY : Parser.obj
+
+# target to build an object file
+Parser.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Parser.cpp.obj
+.PHONY : Parser.cpp.obj
+
+Parser.i: Parser.cpp.i
+
+.PHONY : Parser.i
+
+# target to preprocess a source file
+Parser.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Parser.cpp.i
+.PHONY : Parser.cpp.i
+
+Parser.s: Parser.cpp.s
+
+.PHONY : Parser.s
+
+# target to generate assembly for a file
+Parser.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Parser.cpp.s
+.PHONY : Parser.cpp.s
+
 Redactor.obj: Redactor.cpp.obj
 
 .PHONY : Redactor.obj
@@ -449,6 +476,9 @@ help:
 	@echo ... ObjectAnalyzer.obj
 	@echo ... ObjectAnalyzer.i
 	@echo ... ObjectAnalyzer.s
+	@echo ... Parser.obj
+	@echo ... Parser.i
+	@echo ... Parser.s
 	@echo ... Redactor.obj
 	@echo ... Redactor.i
 	@echo ... Redactor.s

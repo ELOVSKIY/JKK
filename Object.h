@@ -14,7 +14,7 @@ private:
     set<Value> objectFields;
     string className;
 public:
-    Object(string name, int type);
+    Object(string name);
 };
 
 

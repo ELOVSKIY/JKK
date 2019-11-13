@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj"
   "CMakeFiles/Test.dir/Object.cpp.obj"
   "CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj"
+  "CMakeFiles/Test.dir/Parser.cpp.obj"
   "CMakeFiles/Test.dir/Redactor.cpp.obj"
   "CMakeFiles/Test.dir/Validator.cpp.obj"
   "CMakeFiles/Test.dir/Value.cpp.obj"
