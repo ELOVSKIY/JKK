@@ -14,6 +14,7 @@ private:
     set<Value> objectFields;
     string className;
 public:
+    void addValue(Value value);
     Object(string name);
 };
 
