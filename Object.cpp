@@ -4,7 +4,7 @@
 
 #include "Object.h"
 
-Object::Object(string name, int type) : AbstractValue(name, type) {
+Object::Object(string name, int type) : Value(name, type) {
     Object::className = name;
     Object::className = name;
 

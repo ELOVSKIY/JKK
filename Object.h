@@ -6,12 +6,12 @@
 #ifndef TEST_OBJECT_H
 #define TEST_OBJECT_H
 
-#include "AbstractValue.h"
+#include "Value.h"
 #include <set>
 
-class Object: public AbstractValue {
+class Object: public Value {
 private:
-    set<AbstractValue> objectFields;
+    set<Value> objectFields;
     string className;
 public:
     Object(string name, int type);

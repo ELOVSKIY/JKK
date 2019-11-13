@@ -122,33 +122,6 @@ Test/fast:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/build
 .PHONY : Test/fast
 
-AbstractValue.obj: AbstractValue.cpp.obj
-
-.PHONY : AbstractValue.obj
-
-# target to build an object file
-AbstractValue.cpp.obj:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/AbstractValue.cpp.obj
-.PHONY : AbstractValue.cpp.obj
-
-AbstractValue.i: AbstractValue.cpp.i
-
-.PHONY : AbstractValue.i
-
-# target to preprocess a source file
-AbstractValue.cpp.i:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/AbstractValue.cpp.i
-.PHONY : AbstractValue.cpp.i
-
-AbstractValue.s: AbstractValue.cpp.s
-
-.PHONY : AbstractValue.s
-
-# target to generate assembly for a file
-AbstractValue.cpp.s:
-	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/AbstractValue.cpp.s
-.PHONY : AbstractValue.cpp.s
-
 Analyzer.obj: Analyzer.cpp.obj
 
 .PHONY : Analyzer.obj
@@ -392,6 +365,33 @@ Validator.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Validator.cpp.s
 .PHONY : Validator.cpp.s
 
+Value.obj: Value.cpp.obj
+
+.PHONY : Value.obj
+
+# target to build an object file
+Value.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Value.cpp.obj
+.PHONY : Value.cpp.obj
+
+Value.i: Value.cpp.i
+
+.PHONY : Value.i
+
+# target to preprocess a source file
+Value.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Value.cpp.i
+.PHONY : Value.cpp.i
+
+Value.s: Value.cpp.s
+
+.PHONY : Value.s
+
+# target to generate assembly for a file
+Value.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Value.cpp.s
+.PHONY : Value.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -428,9 +428,6 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Test
 	@echo ... edit_cache
-	@echo ... AbstractValue.obj
-	@echo ... AbstractValue.i
-	@echo ... AbstractValue.s
 	@echo ... Analyzer.obj
 	@echo ... Analyzer.i
 	@echo ... Analyzer.s
@@ -458,6 +455,9 @@ help:
 	@echo ... Validator.obj
 	@echo ... Validator.i
 	@echo ... Validator.s
+	@echo ... Value.obj
+	@echo ... Value.i
+	@echo ... Value.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

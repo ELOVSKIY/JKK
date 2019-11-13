@@ -173,18 +173,18 @@ CMakeFiles/Test.dir/Validator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Validator.cpp.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\admin\Desktop\Test\Validator.cpp -o CMakeFiles\Test.dir\Validator.cpp.s
 
-CMakeFiles/Test.dir/AbstractValue.cpp.obj: CMakeFiles/Test.dir/flags.make
-CMakeFiles/Test.dir/AbstractValue.cpp.obj: ../AbstractValue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\admin\Desktop\Test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Test.dir/AbstractValue.cpp.obj"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\AbstractValue.cpp.obj -c C:\Users\admin\Desktop\Test\AbstractValue.cpp
+CMakeFiles/Test.dir/Value.cpp.obj: CMakeFiles/Test.dir/flags.make
+CMakeFiles/Test.dir/Value.cpp.obj: ../Value.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\admin\Desktop\Test\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Test.dir/Value.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Test.dir\Value.cpp.obj -c C:\Users\admin\Desktop\Test\Value.cpp
 
-CMakeFiles/Test.dir/AbstractValue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/AbstractValue.cpp.i"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\admin\Desktop\Test\AbstractValue.cpp > CMakeFiles\Test.dir\AbstractValue.cpp.i
+CMakeFiles/Test.dir/Value.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/Value.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\admin\Desktop\Test\Value.cpp > CMakeFiles\Test.dir\Value.cpp.i
 
-CMakeFiles/Test.dir/AbstractValue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/AbstractValue.cpp.s"
-	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\admin\Desktop\Test\AbstractValue.cpp -o CMakeFiles\Test.dir\AbstractValue.cpp.s
+CMakeFiles/Test.dir/Value.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/Value.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\admin\Desktop\Test\Value.cpp -o CMakeFiles\Test.dir\Value.cpp.s
 
 CMakeFiles/Test.dir/Object.cpp.obj: CMakeFiles/Test.dir/flags.make
 CMakeFiles/Test.dir/Object.cpp.obj: ../Object.cpp
@@ -210,7 +210,7 @@ Test_OBJECTS = \
 "CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj" \
 "CMakeFiles/Test.dir/Analyzer.cpp.obj" \
 "CMakeFiles/Test.dir/Validator.cpp.obj" \
-"CMakeFiles/Test.dir/AbstractValue.cpp.obj" \
+"CMakeFiles/Test.dir/Value.cpp.obj" \
 "CMakeFiles/Test.dir/Object.cpp.obj"
 
 # External object files for target Test
@@ -225,7 +225,7 @@ Test.exe: CMakeFiles/Test.dir/ArrayAnalyzer.cpp.obj
 Test.exe: CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj
 Test.exe: CMakeFiles/Test.dir/Analyzer.cpp.obj
 Test.exe: CMakeFiles/Test.dir/Validator.cpp.obj
-Test.exe: CMakeFiles/Test.dir/AbstractValue.cpp.obj
+Test.exe: CMakeFiles/Test.dir/Value.cpp.obj
 Test.exe: CMakeFiles/Test.dir/Object.cpp.obj
 Test.exe: CMakeFiles/Test.dir/build.make
 Test.exe: CMakeFiles/Test.dir/linklibs.rsp

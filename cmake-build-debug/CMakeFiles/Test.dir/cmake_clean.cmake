@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Test.dir/AbstractValue.cpp.obj"
   "CMakeFiles/Test.dir/Analyzer.cpp.obj"
   "CMakeFiles/Test.dir/ArrayAnalyzer.cpp.obj"
   "CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj"
@@ -9,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj"
   "CMakeFiles/Test.dir/Redactor.cpp.obj"
   "CMakeFiles/Test.dir/Validator.cpp.obj"
+  "CMakeFiles/Test.dir/Value.cpp.obj"
   "CMakeFiles/Test.dir/main.cpp.obj"
   "Test.exe"
   "Test.exe.manifest"

@@ -80,12 +80,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/admin/Desktop/Test/AbstractValue.cpp">
-			<Option target="Test"/>
-		</Unit>
-		<Unit filename="C:/Users/admin/Desktop/Test/AbstractValue.h">
-			<Option target="Test"/>
-		</Unit>
 		<Unit filename="C:/Users/admin/Desktop/Test/Analyzer.cpp">
 			<Option target="Test"/>
 		</Unit>
@@ -138,6 +132,12 @@
 			<Option target="Test"/>
 		</Unit>
 		<Unit filename="C:/Users/admin/Desktop/Test/Validator.h">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/Value.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/Value.h">
 			<Option target="Test"/>
 		</Unit>
 		<Unit filename="C:/Users/admin/Desktop/Test/main.cpp">

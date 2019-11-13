@@ -2,15 +2,15 @@
 // Created by admin on 09.11.2019.
 //
 
-#ifndef TEST_ABSTRACTVALUE_H
-#define TEST_ABSTRACTVALUE_H
+#ifndef TEST_VALUE_H
+#define TEST_VALUE_H
 
 #include <string>
 
 using namespace std;
 
 
-class AbstractValue {
+class Value {
 protected:
     string name;
     string serializeName;
@@ -33,9 +33,9 @@ public:
 
     void setTableName(string tableName);
 
-    AbstractValue(string name, int type);
+    Value(string name, int type);
 
 };
 
 
-#endif //TEST_ABSTRACTVALUE_H
+#endif //TEST_VALUE_H

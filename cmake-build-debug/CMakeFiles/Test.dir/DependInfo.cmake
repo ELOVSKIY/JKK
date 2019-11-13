@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/admin/Desktop/Test/AbstractValue.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/AbstractValue.cpp.obj"
   "C:/Users/admin/Desktop/Test/Analyzer.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Analyzer.cpp.obj"
   "C:/Users/admin/Desktop/Test/ArrayAnalyzer.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/ArrayAnalyzer.cpp.obj"
   "C:/Users/admin/Desktop/Test/ElementAnalyzer.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj"
@@ -14,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/admin/Desktop/Test/ObjectAnalyzer.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj"
   "C:/Users/admin/Desktop/Test/Redactor.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Redactor.cpp.obj"
   "C:/Users/admin/Desktop/Test/Validator.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Validator.cpp.obj"
+  "C:/Users/admin/Desktop/Test/Value.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Value.cpp.obj"
   "C:/Users/admin/Desktop/Test/main.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

@@ -9,6 +9,6 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "RUS");
-    auto *ob = new Object("SUKA", AbstractValue::TYPE_ANY);
+    auto *ob = new Object("SUKA", Value::TYPE_ANY);
     return 0;
 }

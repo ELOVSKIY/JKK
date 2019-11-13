@@ -6,17 +6,11 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/admin/Desktop/Test/AbstractValue.h
+C:/Users/admin/Desktop/Test/Value.cpp
+Value.h
+C:/Users/admin/Desktop/Test/Value.h
+
+C:/Users/admin/Desktop/Test/Value.h
 string
--
-
-C:/Users/admin/Desktop/Test/Object.cpp
-Object.h
-C:/Users/admin/Desktop/Test/Object.h
-
-C:/Users/admin/Desktop/Test/Object.h
-AbstractValue.h
-C:/Users/admin/Desktop/Test/AbstractValue.h
-set
 -
 
