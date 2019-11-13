@@ -8,7 +8,12 @@
 #include <string>
 
 using namespace std;
-
+static const int TYPE_OBJECT = 0;
+static const int TYPE_NUMB = 1;
+static const int TYPE_STRING = 2;
+static const int TYPE_BOOL = 3;
+static const int TYPE_ARRAY = 4;
+static const int TYPE_ANY = 5;
 
 class Value {
 protected:
@@ -18,12 +23,7 @@ protected:
     int type;
     bool isNullable;
 public:
-    static const int TYPE_OBJECT = 0;
-    static const int TYPE_NUMB = 1;
-    static const int TYPE_STRING = 2;
-    static const int TYPE_BOOL = 3;
-    static const int TYPE_ARRAY = 4;
-    static const int TYPE_ANY = 5;
+
 
     void setName(string name);
 

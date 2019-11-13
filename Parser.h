@@ -21,7 +21,7 @@ private:
 
     string getParsedValue();
 
-    int getParsedType();
+    int getParsedType(string value);
 
 public:
     Object *getObject();

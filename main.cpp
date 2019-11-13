@@ -9,6 +9,13 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "RUS");
-    auto *ob = new Object("SUKA");
+    string str = "{\n"
+                 "  \"name\": \"John\",\n"
+                 "  \"age\": 30, \"isAdmin\": false,\n"
+                 "  \"courses\": [\"html\", \"css\", \"js\"],\n"
+                 "  \"wife\": null\n"
+                 "}";
+    Redactor red(str);
+    cout<<red.getEditedText()<<endl;
     return 0;
 }
