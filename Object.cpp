@@ -9,6 +9,7 @@ Object::Object(string name) : Value(name, TYPE_OBJECT) {
     this->className[0] = toupper(name[0]);
 }
 
-void Object::addValue(Value value) {
+void Object::addValue(Value *value) {
     objectFields.insert(value);
 }
+    

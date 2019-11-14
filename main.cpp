@@ -4,18 +4,24 @@
 #include "Validator.h"
 #include <string>
 #include "Object.h"
+#include "Parser.h"
 
 using namespace std;
 
 int main() {
     setlocale(LC_ALL, "RUS");
     string str = "{\n"
-                 "  \"name\": \"John\",\n"
-                 "  \"age\": 30, \"isAdmin\": false,\n"
-                 "  \"courses\": [\"html\", \"css\", \"js\"],\n"
-                 "  \"wife\": null\n"
+                 "  \"title\":\"Conference\",\n"
+                 "  \"room\":"
+                 "     {"
+                 "      \"number\":23,"
+                 "      \"participants\":["
+                 "                       \"john\","
+                 "                        \"ann\""
+                 "                       ]"
+                 "     }\n"
                  "}";
-    Redactor red(str);
-    cout<<red.getEditedText()<<endl;
+    Parser *parser = new Parser(str, "Response");
+    Object *obj = parser->getObject();
     return 0;
 }

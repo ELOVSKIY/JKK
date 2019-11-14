@@ -10,7 +10,7 @@ Object *Parser::getObject() {
 
 Parser::Parser(string parsedText, string objectName) : parsedText(parsedText) {
     Redactor *redactor = new Redactor(parsedText);
-    parsedText = redactor->getCompressedText();
+    this->parsedText = redactor->getCompressedText();
     delete (redactor);
     object = new Object(objectName);
     pos = 0;
@@ -34,7 +34,7 @@ int Parser::getParsedType(string value) {
         return TYPE_OBJECT;
     }
     if ((value[0] == 't') || (value[0] == 'f')) {
-        return TYPE_OBJECT;
+        return TYPE_BOOL;
     }
     return TYPE_NUMB;
 }
@@ -45,13 +45,16 @@ void Parser::parse() {
         string name = getParsedName();
         pos++; // пропуск двоеточия между именем и значением
         string value = getParsedValue();
-        int type = getParsedType(value);
-        if (type == TYPE_ARRAY){
+        char debug = parsedText[pos];
+        pos++; //пропуск запятой между value
+        int type = getParsedType(value); //TODO ХУЕТА
+        if (type == TYPE_ARRAY) {
             //TODO ARRAY PARSER
-        }
-        if (type == TYPE_OBJECT){
+        } else if (type == TYPE_OBJECT) {
             Parser *innerParser = new Parser(value, "name");
-            object
+            object->addValue(innerParser->getObject());
+        } else {
+            object->addValue(new Value(name, type));
         }
     }
 }
@@ -59,7 +62,11 @@ void Parser::parse() {
 string Parser::getParsedName() {
     string name;
     pos++;
-    while ((parsedText[pos] != '\"') || (parsedText[pos - 1] != '\\')) {
+    while (true) {
+        char debug = parsedText[pos];
+        if ((parsedText[pos] == '\"') && (parsedText[pos - 1] != '\\')) {
+            break;
+        }
         name += parsedText[pos];
         pos++;
     }
@@ -73,11 +80,13 @@ string Parser::getParsedValue() {
     int objectDeep = 0;
     int arrayDeep = 0;
     while (true) {
-        if ((objectDeep == 0) && (arrayDeep == 0) && (!isString) && (parsedText[pos] == ',')) {
+        char debug = parsedText[pos];
+        if ((objectDeep == 0) && (arrayDeep == 0) && (!isString) &&
+            ((parsedText[pos] == ',') || (parsedText[pos]) == '}')) {
             break;
         }
         typeValue += parsedText[pos];
-        if ((parsedText[pos] != '\"') || (parsedText[pos - 1] != '\\')) {
+        if ((parsedText[pos] == '\"') && (parsedText[pos - 1] != '\\')) {
             isString = !isString;
         }
         if (!isString) {
