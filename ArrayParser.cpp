@@ -41,6 +41,7 @@ void ArrayParser::parse() {
     getArrayType();
     if (arrayType == TYPE_OBJECT){
         value = new Object(arrayName);
+
     }else{
         value = new Value(arrayName, arrayType);
     }
@@ -87,4 +88,8 @@ void ArrayParser::parseArrayIntoElements() {
         elementText = elementText.substr(0, elementText.length() - 1);
         arrayElements->push_front(elementText);
     }
+}
+
+Value *ArrayParser::getParserValue() {
+    return value;
 }

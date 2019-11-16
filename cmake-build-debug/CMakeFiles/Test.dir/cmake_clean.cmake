@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Test.dir/Analyzer.cpp.obj"
   "CMakeFiles/Test.dir/ArrayAnalyzer.cpp.obj"
   "CMakeFiles/Test.dir/ArrayParser.cpp.obj"
+  "CMakeFiles/Test.dir/ArrayValue.cpp.obj"
   "CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj"
   "CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj"
   "CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj"

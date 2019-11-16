@@ -203,6 +203,33 @@ ArrayParser.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ArrayParser.cpp.s
 .PHONY : ArrayParser.cpp.s
 
+ArrayValue.obj: ArrayValue.cpp.obj
+
+.PHONY : ArrayValue.obj
+
+# target to build an object file
+ArrayValue.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ArrayValue.cpp.obj
+.PHONY : ArrayValue.cpp.obj
+
+ArrayValue.i: ArrayValue.cpp.i
+
+.PHONY : ArrayValue.i
+
+# target to preprocess a source file
+ArrayValue.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ArrayValue.cpp.i
+.PHONY : ArrayValue.cpp.i
+
+ArrayValue.s: ArrayValue.cpp.s
+
+.PHONY : ArrayValue.s
+
+# target to generate assembly for a file
+ArrayValue.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/ArrayValue.cpp.s
+.PHONY : ArrayValue.cpp.s
+
 ElementAnalyzer.obj: ElementAnalyzer.cpp.obj
 
 .PHONY : ElementAnalyzer.obj
@@ -491,6 +518,9 @@ help:
 	@echo ... ArrayParser.obj
 	@echo ... ArrayParser.i
 	@echo ... ArrayParser.s
+	@echo ... ArrayValue.obj
+	@echo ... ArrayValue.i
+	@echo ... ArrayValue.s
 	@echo ... ElementAnalyzer.obj
 	@echo ... ElementAnalyzer.i
 	@echo ... ElementAnalyzer.s

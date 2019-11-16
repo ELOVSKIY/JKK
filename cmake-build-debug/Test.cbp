@@ -98,6 +98,12 @@
 		<Unit filename="C:/Users/admin/Desktop/Test/ArrayParser.h">
 			<Option target="Test"/>
 		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/ArrayValue.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/ArrayValue.h">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="C:/Users/admin/Desktop/Test/ElementAnalyzer.cpp">
 			<Option target="Test"/>
 		</Unit>

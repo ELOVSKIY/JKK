@@ -27,6 +27,8 @@ class ArrayParser {
 
     Value *getParserValue();
 
+    void parseArrayObject();
+
 public:
     ArrayParser(string parsedText, string arrayName);
 };
