@@ -25,12 +25,12 @@ class ArrayParser {
 
     void getArrayType();
 
-    Value *getParserValue();
-
     void parseArrayObject();
 
 public:
     ArrayParser(string parsedText, string arrayName);
+
+    Value *getParserValue();
 };
 
 

@@ -4,6 +4,7 @@
 
 #include "ArrayParser.h"
 #include "Object.h"
+#include "ArrayValue.h"
 
 ArrayParser::ArrayParser(string parsedText, string arrayName) {
     this -> parsedText = parsedText.substr(1, parsedText.size() - 1);
@@ -91,5 +92,5 @@ void ArrayParser::parseArrayIntoElements() {
 }
 
 Value *ArrayParser::getParserValue() {
-    return value;
+    return new ArrayValue(arrayName, value);
 }

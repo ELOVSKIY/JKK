@@ -50,6 +50,7 @@ void Parser::parse() {
         int type = getParsedType(value); //TODO ХУЕТА
         if (type == TYPE_ARRAY) {
             ArrayParser *arrayParser = new ArrayParser(value, name);
+            object->addValue(arrayParser->getParserValue());
         } else if (type == TYPE_OBJECT) {
             Parser *innerParser = new Parser(value, name);
             object->addValue(innerParser->getObject());
