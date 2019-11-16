@@ -10,6 +10,11 @@ CMakeFiles/Test.dir/ArrayAnalyzer.cpp.obj
  C:/Users/admin/Desktop/Test/ArrayAnalyzer.h
  C:/Users/admin/Desktop/Test/ElementAnalyzer.h
  C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
+CMakeFiles/Test.dir/ArrayParser.cpp.obj
+ C:/Users/admin/Desktop/Test/ArrayParser.cpp
+ C:/Users/admin/Desktop/Test/ArrayParser.h
+ C:/Users/admin/Desktop/Test/Object.h
+ C:/Users/admin/Desktop/Test/Value.h
 CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj
  C:/Users/admin/Desktop/Test/Analyzer.h
  C:/Users/admin/Desktop/Test/ArrayAnalyzer.h
@@ -30,6 +35,7 @@ CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj
  C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
  C:/Users/admin/Desktop/Test/Redactor.h
 CMakeFiles/Test.dir/Parser.cpp.obj
+ C:/Users/admin/Desktop/Test/ArrayParser.h
  C:/Users/admin/Desktop/Test/Object.h
  C:/Users/admin/Desktop/Test/Parser.cpp
  C:/Users/admin/Desktop/Test/Parser.h
@@ -50,6 +56,7 @@ CMakeFiles/Test.dir/main.cpp.obj
  C:/Users/admin/Desktop/Test/ElementAnalyzer.h
  C:/Users/admin/Desktop/Test/Object.h
  C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
+ C:/Users/admin/Desktop/Test/Parser.h
  C:/Users/admin/Desktop/Test/Redactor.h
  C:/Users/admin/Desktop/Test/Validator.h
  C:/Users/admin/Desktop/Test/Value.h

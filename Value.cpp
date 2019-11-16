@@ -25,6 +25,6 @@ Value::Value(string name, int type)  {
     this->type = type;
     this->tableName = name;
     this->serializeName = name;
-    this->isNullable = false;
+    this->isNullable = true;
     (this->name)[0] = tolower(name[0]);
 }

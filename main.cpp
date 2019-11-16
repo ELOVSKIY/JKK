@@ -21,7 +21,6 @@ int main() {
                  "                       ]"
                  "     }\n"
                  "}";
-    Parser *parser = new Parser(str, "Response");
-    Object *obj = parser->getObject();
+    Parser *parser = new Parser(str, "Pars");
     return 0;
 }
