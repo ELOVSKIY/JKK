@@ -28,3 +28,9 @@ Value::Value(string name, int type)  {
     this->isNullable = true;
     (this->name)[0] = tolower(name[0]);
 }
+
+int Value::getType()  {
+    return type;
+}
+
+

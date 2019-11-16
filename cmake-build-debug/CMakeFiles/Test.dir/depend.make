@@ -12,8 +12,14 @@ CMakeFiles/Test.dir/ArrayAnalyzer.cpp.obj: ../ObjectAnalyzer.h
 
 CMakeFiles/Test.dir/ArrayParser.cpp.obj: ../ArrayParser.cpp
 CMakeFiles/Test.dir/ArrayParser.cpp.obj: ../ArrayParser.h
+CMakeFiles/Test.dir/ArrayParser.cpp.obj: ../ArrayValue.h
 CMakeFiles/Test.dir/ArrayParser.cpp.obj: ../Object.h
+CMakeFiles/Test.dir/ArrayParser.cpp.obj: ../Parser.h
 CMakeFiles/Test.dir/ArrayParser.cpp.obj: ../Value.h
+
+CMakeFiles/Test.dir/ArrayValue.cpp.obj: ../ArrayValue.cpp
+CMakeFiles/Test.dir/ArrayValue.cpp.obj: ../ArrayValue.h
+CMakeFiles/Test.dir/ArrayValue.cpp.obj: ../Value.h
 
 CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj: ../Analyzer.h
 CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj: ../ArrayAnalyzer.h

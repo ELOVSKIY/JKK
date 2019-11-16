@@ -13,7 +13,13 @@ CMakeFiles/Test.dir/ArrayAnalyzer.cpp.obj
 CMakeFiles/Test.dir/ArrayParser.cpp.obj
  C:/Users/admin/Desktop/Test/ArrayParser.cpp
  C:/Users/admin/Desktop/Test/ArrayParser.h
+ C:/Users/admin/Desktop/Test/ArrayValue.h
  C:/Users/admin/Desktop/Test/Object.h
+ C:/Users/admin/Desktop/Test/Parser.h
+ C:/Users/admin/Desktop/Test/Value.h
+CMakeFiles/Test.dir/ArrayValue.cpp.obj
+ C:/Users/admin/Desktop/Test/ArrayValue.cpp
+ C:/Users/admin/Desktop/Test/ArrayValue.h
  C:/Users/admin/Desktop/Test/Value.h
 CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj
  C:/Users/admin/Desktop/Test/Analyzer.h

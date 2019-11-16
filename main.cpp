@@ -5,21 +5,20 @@
 #include <string>
 #include "Object.h"
 #include "Parser.h"
+#include "ArrayValue.h"
 
 using namespace std;
+
+void printValue(Value *value){
+    if (value)
+}
 
 int main() {
     setlocale(LC_ALL, "RUS");
     string str = "{\n"
-                 "  \"title\":\"Conference\",\n"
-                 "  \"room\":"
-                 "     {"
-                 "      \"number\":23,"
-                 "      \"participants\":["
-                 "                       \"john\","
-                 "                        \"ann\""
-                 "                       ]"
-                 "     }\n"
+                 "  \"title\":\"Совещание\",\n"
+                 "  \"occupiedBy\":[{\"name\":\"Иванов\"},{\"name\":\"Петров\"}],\n"
+                 "  \"place\":{\"number\":23}\n"
                  "}";
     Parser *parser = new Parser(str, "Pars");
     return 0;

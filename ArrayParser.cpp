@@ -5,6 +5,7 @@
 #include "ArrayParser.h"
 #include "Object.h"
 #include "ArrayValue.h"
+#include "Parser.h"
 
 ArrayParser::ArrayParser(string parsedText, string arrayName) {
     this -> parsedText = parsedText.substr(1, parsedText.size() - 1);
@@ -41,8 +42,7 @@ void ArrayParser::parse() {
     parseArrayIntoElements();
     getArrayType();
     if (arrayType == TYPE_OBJECT){
-        value = new Object(arrayName);
-
+        parseArrayObject();
     }else{
         value = new Value(arrayName, arrayType);
     }
@@ -93,4 +93,13 @@ void ArrayParser::parseArrayIntoElements() {
 
 Value *ArrayParser::getParserValue() {
     return new ArrayValue(arrayName, value);
+}
+
+void ArrayParser::parseArrayObject() {
+    for (const string& element : *arrayElements) {
+        if(element[0] != 'n') {
+            Parser *innerParser = new Parser(element, arrayName);
+            value = innerParser->getObject();
+        }
+    }
 }

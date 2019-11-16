@@ -24,6 +24,7 @@ protected:
     int type;
     bool isNullable;
 public:
+    int getType();
 
     void setName(string name);
 
