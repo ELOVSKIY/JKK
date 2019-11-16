@@ -9,8 +9,19 @@
 
 using namespace std;
 
-void printValue(Value *value){
-    if (value)
+void printValue(Value *value) {
+    if (value->getType() == TYPE_OBJECT) {
+        auto object = (Object *) value;
+        auto set = object->getObjectFields();
+        for (auto v : set) {
+            printValue(v);
+        }
+    } else if (value->getType() == TYPE_ARRAY) {
+        auto array = (ArrayValue *) value;
+        auto v = array->getArrayValue();
+        printValue(v);
+    }
+        cout<<value->getName()<<endl;
 }
 
 int main() {
@@ -21,5 +32,6 @@ int main() {
                  "  \"place\":{\"number\":23}\n"
                  "}";
     Parser *parser = new Parser(str, "Pars");
+    printValue(parser->getObject());
     return 0;
 }

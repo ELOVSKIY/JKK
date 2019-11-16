@@ -30,6 +30,11 @@ CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj
  C:/Users/admin/Desktop/Test/Redactor.h
 CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj
 CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj
+CMakeFiles/Test.dir/KotlinClass.cpp.obj
+ C:/Users/admin/Desktop/Test/KotlinClass.cpp
+ C:/Users/admin/Desktop/Test/KotlinClass.h
+ C:/Users/admin/Desktop/Test/Object.h
+ C:/Users/admin/Desktop/Test/Value.h
 CMakeFiles/Test.dir/Object.cpp.obj
  C:/Users/admin/Desktop/Test/Object.cpp
  C:/Users/admin/Desktop/Test/Object.h
@@ -59,6 +64,7 @@ CMakeFiles/Test.dir/Value.cpp.obj
  C:/Users/admin/Desktop/Test/Value.h
 CMakeFiles/Test.dir/main.cpp.obj
  C:/Users/admin/Desktop/Test/Analyzer.h
+ C:/Users/admin/Desktop/Test/ArrayValue.h
  C:/Users/admin/Desktop/Test/ElementAnalyzer.h
  C:/Users/admin/Desktop/Test/Object.h
  C:/Users/admin/Desktop/Test/ObjectAnalyzer.h

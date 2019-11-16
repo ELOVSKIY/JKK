@@ -311,6 +311,33 @@ Entities/ObjectJSON.cpp.s:
 	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.s
 .PHONY : Entities/ObjectJSON.cpp.s
 
+KotlinClass.obj: KotlinClass.cpp.obj
+
+.PHONY : KotlinClass.obj
+
+# target to build an object file
+KotlinClass.cpp.obj:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/KotlinClass.cpp.obj
+.PHONY : KotlinClass.cpp.obj
+
+KotlinClass.i: KotlinClass.cpp.i
+
+.PHONY : KotlinClass.i
+
+# target to preprocess a source file
+KotlinClass.cpp.i:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/KotlinClass.cpp.i
+.PHONY : KotlinClass.cpp.i
+
+KotlinClass.s: KotlinClass.cpp.s
+
+.PHONY : KotlinClass.s
+
+# target to generate assembly for a file
+KotlinClass.cpp.s:
+	$(MAKE) -f CMakeFiles\Test.dir\build.make CMakeFiles/Test.dir/KotlinClass.cpp.s
+.PHONY : KotlinClass.cpp.s
+
 Object.obj: Object.cpp.obj
 
 .PHONY : Object.obj
@@ -530,6 +557,9 @@ help:
 	@echo ... Entities/ObjectJSON.obj
 	@echo ... Entities/ObjectJSON.i
 	@echo ... Entities/ObjectJSON.s
+	@echo ... KotlinClass.obj
+	@echo ... KotlinClass.i
+	@echo ... KotlinClass.s
 	@echo ... Object.obj
 	@echo ... Object.i
 	@echo ... Object.s

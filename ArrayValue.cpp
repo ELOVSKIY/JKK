@@ -9,3 +9,7 @@ ArrayValue::ArrayValue(string name, Value *value): Value(name, TYPE_ARRAY){
     this->name = name;
 }
 
+Value *ArrayValue::getArrayValue() {
+    return arrayValue;
+}
+

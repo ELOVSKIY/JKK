@@ -14,7 +14,12 @@ private:
     set<Value*> objectFields;
     string className;
 public:
+    string getClassName();
+
     void addValue(Value *value);
+
+    set<Value*> getObjectFields();
+
     Object(string name);
 };
 

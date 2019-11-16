@@ -30,6 +30,11 @@ CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj: ../Redactor.h
 
 
 
+CMakeFiles/Test.dir/KotlinClass.cpp.obj: ../KotlinClass.cpp
+CMakeFiles/Test.dir/KotlinClass.cpp.obj: ../KotlinClass.h
+CMakeFiles/Test.dir/KotlinClass.cpp.obj: ../Object.h
+CMakeFiles/Test.dir/KotlinClass.cpp.obj: ../Value.h
+
 CMakeFiles/Test.dir/Object.cpp.obj: ../Object.cpp
 CMakeFiles/Test.dir/Object.cpp.obj: ../Object.h
 CMakeFiles/Test.dir/Object.cpp.obj: ../Value.h
@@ -58,6 +63,7 @@ CMakeFiles/Test.dir/Value.cpp.obj: ../Value.cpp
 CMakeFiles/Test.dir/Value.cpp.obj: ../Value.h
 
 CMakeFiles/Test.dir/main.cpp.obj: ../Analyzer.h
+CMakeFiles/Test.dir/main.cpp.obj: ../ArrayValue.h
 CMakeFiles/Test.dir/main.cpp.obj: ../ElementAnalyzer.h
 CMakeFiles/Test.dir/main.cpp.obj: ../Object.h
 CMakeFiles/Test.dir/main.cpp.obj: ../ObjectAnalyzer.h

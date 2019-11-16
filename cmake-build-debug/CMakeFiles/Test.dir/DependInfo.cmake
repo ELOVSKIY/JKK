@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/admin/Desktop/Test/ElementAnalyzer.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/ElementAnalyzer.cpp.obj"
   "C:/Users/admin/Desktop/Test/Entities/AbstractObjectJSON.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Entities/AbstractObjectJSON.cpp.obj"
   "C:/Users/admin/Desktop/Test/Entities/ObjectJSON.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Entities/ObjectJSON.cpp.obj"
+  "C:/Users/admin/Desktop/Test/KotlinClass.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/KotlinClass.cpp.obj"
   "C:/Users/admin/Desktop/Test/Object.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Object.cpp.obj"
   "C:/Users/admin/Desktop/Test/ObjectAnalyzer.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/ObjectAnalyzer.cpp.obj"
   "C:/Users/admin/Desktop/Test/Parser.cpp" "C:/Users/admin/Desktop/Test/cmake-build-debug/CMakeFiles/Test.dir/Parser.cpp.obj"

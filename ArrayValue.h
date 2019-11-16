@@ -12,6 +12,8 @@ private:
     Value *arrayValue;
 public:
     ArrayValue(string name, Value *value);
+
+    Value * getArrayValue();
 };
 
 

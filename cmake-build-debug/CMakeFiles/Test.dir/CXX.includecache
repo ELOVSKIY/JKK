@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/admin/Desktop/Test/Analyzer.h
+
 C:/Users/admin/Desktop/Test/ArrayParser.cpp
 ArrayParser.h
 C:/Users/admin/Desktop/Test/ArrayParser.h
@@ -22,9 +24,37 @@ C:/Users/admin/Desktop/Test/Value.h
 list
 C:/Users/admin/Desktop/Test/list
 
+C:/Users/admin/Desktop/Test/ArrayValue.cpp
+ArrayValue.h
+C:/Users/admin/Desktop/Test/ArrayValue.h
+
 C:/Users/admin/Desktop/Test/ArrayValue.h
 Value.h
 C:/Users/admin/Desktop/Test/Value.h
+
+C:/Users/admin/Desktop/Test/ElementAnalyzer.h
+string
+-
+Analyzer.h
+C:/Users/admin/Desktop/Test/Analyzer.h
+
+C:/Users/admin/Desktop/Test/KotlinClass.cpp
+KotlinClass.h
+C:/Users/admin/Desktop/Test/KotlinClass.h
+
+C:/Users/admin/Desktop/Test/KotlinClass.h
+string
+-
+list
+-
+Object.h
+C:/Users/admin/Desktop/Test/Object.h
+Value.h
+C:/Users/admin/Desktop/Test/Value.h
+
+C:/Users/admin/Desktop/Test/Object.cpp
+Object.h
+C:/Users/admin/Desktop/Test/Object.h
 
 C:/Users/admin/Desktop/Test/Object.h
 Value.h
@@ -32,11 +62,57 @@ C:/Users/admin/Desktop/Test/Value.h
 set
 -
 
+C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
+string
+-
+ElementAnalyzer.h
+C:/Users/admin/Desktop/Test/ElementAnalyzer.h
+Analyzer.h
+C:/Users/admin/Desktop/Test/Analyzer.h
+
+C:/Users/admin/Desktop/Test/Parser.cpp
+Redactor.h
+C:/Users/admin/Desktop/Test/Redactor.h
+Parser.h
+C:/Users/admin/Desktop/Test/Parser.h
+ArrayParser.h
+C:/Users/admin/Desktop/Test/ArrayParser.h
+
 C:/Users/admin/Desktop/Test/Parser.h
 Object.h
 C:/Users/admin/Desktop/Test/Object.h
 
+C:/Users/admin/Desktop/Test/Redactor.h
+string
+-
+
+C:/Users/admin/Desktop/Test/Validator.h
+string
+C:/Users/admin/Desktop/Test/string
+
+C:/Users/admin/Desktop/Test/Value.cpp
+Value.h
+C:/Users/admin/Desktop/Test/Value.h
+
 C:/Users/admin/Desktop/Test/Value.h
 string
 -
+
+C:/Users/admin/Desktop/Test/main.cpp
+iostream
+-
+Redactor.h
+C:/Users/admin/Desktop/Test/Redactor.h
+ObjectAnalyzer.h
+C:/Users/admin/Desktop/Test/ObjectAnalyzer.h
+Validator.h
+C:/Users/admin/Desktop/Test/Validator.h
+string
+-
+Object.h
+C:/Users/admin/Desktop/Test/Object.h
+Parser.h
+C:/Users/admin/Desktop/Test/Parser.h
+ArrayValue.h
+C:/Users/admin/Desktop/Test/ArrayValue.h
 

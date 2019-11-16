@@ -122,6 +122,12 @@
 		<Unit filename="C:/Users/admin/Desktop/Test/Entities/ObjectJSON.h">
 			<Option target="Test"/>
 		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/KotlinClass.cpp">
+			<Option target="Test"/>
+		</Unit>
+		<Unit filename="C:/Users/admin/Desktop/Test/KotlinClass.h">
+			<Option target="Test"/>
+		</Unit>
 		<Unit filename="C:/Users/admin/Desktop/Test/Object.cpp">
 			<Option target="Test"/>
 		</Unit>

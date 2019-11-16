@@ -12,4 +12,12 @@ Object::Object(string name) : Value(name, TYPE_OBJECT) {
 void Object::addValue(Value *value) {
     objectFields.insert(value);
 }
+
+set<Value*> Object::getObjectFields(){
+    return objectFields;
+}
+
+string Object::getClassName() {
+    return className;
+}
     

@@ -28,6 +28,18 @@ public:
 
     void setName(string name);
 
+    string getTypeName();
+
+    string getName();
+
+    string getSerializeName();
+
+    string getTableName();
+
+    bool isSpecialType();
+
+    bool isNullable1();
+
     void setSerializeName(string serializeName);
 
     void setIsNullable(bool isNullable);
